@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build --turbopack && next-image-export-optimizer",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "next": "15.5.2",
+    "next-image-export-optimizer": "^1.19.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "scroll-timeline-polyfill": "^1.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

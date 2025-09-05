@@ -1,0 +1,169 @@
+.root {
+    view-timeline-name: --scene-2-scroll;
+    view-timeline-axis: block;
+}
+
+.background {
+    animation-name: background;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.bg {
+    animation-name: bg;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.platform {
+    animation-name: platform;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.tree {
+    animation-name: tree;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.road {
+    animation-name: road;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.mailbox {
+    animation-name: mailbox;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.deliveryGuy {
+    animation-name: deliveryGuy;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.van {
+    animation-name: van;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 60%;
+}
+
+.arrows {
+    animation-name: arrows;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.cabinet {
+    animation-name: cabinet;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.grandpa {
+    animation-name: grandpa;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+@keyframes background {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes bg {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes platform {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes tree {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes road {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes mailbox {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes deliveryGuy {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes van {
+    from {
+        transform: translate(-380px, -240px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes arrows {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes cabinet {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes grandpa {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}

@@ -1,0 +1,184 @@
+.root {
+    view-timeline-name: --scene-1-scroll;
+    view-timeline-axis: block;
+}
+
+.cat {
+    animation-name: cat;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 70%;
+}
+
+.dog {
+    animation-name: dog;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.props {
+    animation-name: props;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.hands {
+    animation-name: hands;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.box {
+    animation-name: box;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.chairs {
+    animation-name: chairs;
+    animation-timeline: --scene-1-scroll;
+    animation-range: contain 0% cover 50%;
+}
+
+.table {
+    animation-name: table;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.grandpa {
+    animation-name: grandpa;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.plant {
+    animation-name: plant;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.light {
+    animation-name: light;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+.bookshelfAndProps {
+    animation-name: bookshelfAndProps;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 50%
+}
+
+.background {
+    animation-name: background;
+    animation-timeline: --scene-1-scroll;
+    animation-range: cover 0% cover 100%;
+}
+
+@keyframes cat {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(60px);
+    }
+}
+
+@keyframes dog {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes props {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes hands {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes box {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes chairs {
+    from {
+        transform: translate(400px, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes table {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes grandpa {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes plant {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes light {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* transform: translateX(200px); */
+    }
+}
+
+@keyframes bookshelfAndProps {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200px);
+    }
+}
+
+@keyframes background {
+    from {
+        transform: translateY(-600px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
