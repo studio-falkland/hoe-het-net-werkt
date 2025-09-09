@@ -11,12 +11,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+    // NextJS rules
     ...compat.extends('next/core-web-vitals', 'next/typescript'),
-    {
-        rules: {
-            '@next/next/no-img-element': 'off',
-        },
-    },
     {
         ignores: [
             'node_modules/**',
@@ -26,12 +22,21 @@ const eslintConfig = [
             'next-env.d.ts',
         ],
     },
+    // Stylistic rules
     stylistic.configs.customize({
         indent: 4,
         quotes: 'single',
         semi: true,
         jsx: true,
+        arrowParens: 'always',
     }),
+    // Custom rules and overrides
+    {
+        rules: {
+            '@next/next/no-img-element': 'off',
+            '@stylistic/multiline-ternary': 'off',
+        },
+    },
 ];
 
 export default eslintConfig;
