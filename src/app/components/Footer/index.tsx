@@ -1,6 +1,15 @@
 export default function Footer() {
     return (
         <div className="bg-[#f6f6f6]">
+            <svg width="100%" height="12">
+                <defs>
+                    <pattern id="footer-pattern" width="24" height="12" x="0" y="0" patternUnits="userSpaceOnUse">
+                        <path d="M12 0L0 12H24L12 0Z" fill="#f6f6f6" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="12" fill="#d9d9d9" />
+                <rect width="100%" height="12" fill="url(#footer-pattern)" />
+            </svg>
             <div className="max-w-7xl mx-auto py-24 px-4">
                 <p className="font-normal">
                     <span className="font-bold">Hoe het Net Werkt</span>
