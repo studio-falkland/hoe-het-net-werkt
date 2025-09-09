@@ -1,10 +1,18 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { IBM_Plex_Serif, Inter } from 'next/font/google';
 import './globals.css';
+import Menu from './components/Menu';
 
 const inter = Inter({
     variable: '--font-inter',
     subsets: ['latin'],
+});
+
+const ibmPlexSerif = IBM_Plex_Serif({
+    variable: '--font-ibm-plex-serif',
+    subsets: ['latin'],
+    weight: ['300', '400', '700'],
+    style: ['italic'],
 });
 
 export const metadata: Metadata = {
@@ -18,10 +26,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={`${inter.variable} antialiased`}
-            >
+        <html lang="en" className={`${inter.variable} ${ibmPlexSerif.variable}`}>
+            <body className="antialiased">
+                <Menu />
                 {children}
             </body>
         </html>

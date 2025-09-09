@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+    --font-serif: var(--font-ibm-plex-serif);
+    --font-sans: var(--font-inter);
+}
+
 body {
     background-color: #D9D9D9;
 }
