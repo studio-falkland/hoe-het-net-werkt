@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Scene1 from './components/scene-1';
 import Scene2 from './components/scene-2';
 import TextBox from './components/TextBox';
+import Mouse from './components/Mouse';
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <div>
                 <TextBox />
                 <Colofon />
+                <Mouse />
             </div>
             <Scene1 />
             <Scene2 />
