@@ -8,8 +8,8 @@ export default function Footer() {
                     is een visualisatie van hoe protocollen, organisaties en infrastructuur samenkomen om ons dagelijkse internet mogelijk te maken.
                     Het presenteert de resultaten van de call &quot;Internet in Beeld&quot; van het SIDN Fonds.
                 </p>
-                <div className="flex gap-16 mt-12">
-                    <div className="flex flex-col gap-2">
+                <div className="flex gap-16 mt-12 lg:flex-row flex-col">
+                    <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
                             Visualisatie door
                         </span>
@@ -20,7 +20,7 @@ export default function Footer() {
                             <p>Yaël van Engelen</p>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
                             Gefinancierd door
                         </span>
@@ -30,7 +30,7 @@ export default function Footer() {
                             </a>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
                             Met medewerking van
                         </span>
@@ -40,7 +40,7 @@ export default function Footer() {
                             </a>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
                             Deelnemers Internet in Beeld
                         </span>
