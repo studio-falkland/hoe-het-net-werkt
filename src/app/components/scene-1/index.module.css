@@ -7,73 +7,108 @@
     animation-name: cat;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 70%;
+    animation-fill-mode: both;
+    
 }
 
 .dog {
     animation-name: dog;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .props {
     animation-name: props;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .hands {
     animation-name: hands;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .box {
     animation-name: box;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .chairs {
     animation-name: chairs;
     animation-timeline: --scene-1-scroll;
     animation-range: contain 0% cover 50%;
+    animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .table {
     animation-name: table;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .grandpa {
     animation-name: grandpa;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .plant {
     animation-name: plant;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .light {
     animation-name: light;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .bookshelfAndProps {
     animation-name: bookshelfAndProps;
     animation-timing-function: ease;
     animation-timeline: --scene-1-scroll;
-    animation-range: cover 0% cover 50%
+    animation-range: cover 0% cover 50%;
+    animation-fill-mode: both;
 }
 
 .background {
-    animation-name: background;
+    animation: background linear both;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
+}
+
+.appear {
+    animation: appear 1s ease-in-out backwards;
+    animation-delay: 1s;
+
+    &:nth-child(n + 1) {
+        animation-delay: 1.2s;
+    }
+
+    &:nth-child(n + 2) {
+        animation-delay: 1.4s;
+    }
+
+    &:nth-child(n + 3) {
+        animation-delay: 1.6s;
+    }
+    
+    &:nth-child(n + 4) {
+        animation-delay: 1.8s;
+    }
 }
 
 @keyframes cat {
@@ -181,5 +216,16 @@
     }
     to {
         transform: translateY(0px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

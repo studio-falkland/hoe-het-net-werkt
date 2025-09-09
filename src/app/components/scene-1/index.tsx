@@ -20,90 +20,114 @@ export default function Scene1() {
     return (
         <div className={cn('w-screen h-[2400px] pt-[600px] overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
-                <ExportedImage
-                    className={styles.background}
-                    src={background}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.bookshelfAndProps}
-                    src={bookshelfAndProps}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.light}
-                    src={light}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.plant}
-                    src={plant}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.grandpa}
-                    src={grandpa}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.table}
-                    src={table}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.chairs}
-                    src={chairs}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.box}
-                    src={box}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.hands}
-                    src={hands}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.props}
-                    src={props}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    className={styles.cat}
-                    src={cat}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
-                <ExportedImage
-                    src={dog}
-                    className={styles.dog}
-                    alt="Scene 1"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.background}
+                        src={background}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.bohelfAndProps}
+                        src={bookshelfAndProps}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.light}
+                        src={light}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.plant}
+                        src={plant}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.grandpa}
+                        src={grandpa}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.table}
+                        src={table}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.chairs}
+                        src={chairs}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.box}
+                        src={box}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.hands}
+                        src={hands}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.props}
+                        src={props}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        className={styles.cat}
+                        src={cat}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
+                <div className={cn(styles.appear, 'w-full h-full')}>
+                    <ExportedImage
+                        src={dog}
+                        className={styles.dog}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
             </div>
         </div>
     );
