@@ -132,9 +132,13 @@
     }
 }
 
+:root {
+    --van-movement-percentage: 40%;
+}
+
 @keyframes van {
     from {
-        transform: translate(-380px, -240px);
+        transform: translate(calc(var(--van-movement-percentage) * -1), calc(var(--van-movement-percentage) * tan(26.4deg) * 1.5 * -1));
     }
     to {
         transform: translate(0, 0);

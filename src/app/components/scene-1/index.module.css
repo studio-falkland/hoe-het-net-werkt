@@ -65,6 +65,7 @@
 
 .bookshelfAndProps {
     animation-name: bookshelfAndProps;
+    animation-timing-function: ease;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 50%
 }
@@ -104,25 +105,25 @@
 
 @keyframes hands {
     from {
-        transform: translateX(0);
+        transform: translateY(-200px);
     }
     to {
-        /* transform: translateX(200px); */
+        transform: translateY(0);
     }
 }
 
 @keyframes box {
     from {
-        transform: translateX(0);
+        transform: translateY(-400px);
     }
     to {
-        /* transform: translateX(200px); */
+        transform: translateY(0);
     }
 }
 
 @keyframes chairs {
     from {
-        transform: translate(400px, 0);
+        transform: translate(200px, 0);
     }
     to {
         transform: translate(0, 0);
@@ -140,10 +141,10 @@
 
 @keyframes grandpa {
     from {
-        transform: translateX(0);
+        transform: translateY(-200px);
     }
     to {
-        /* transform: translateX(200px); */
+        transform: translateY(0);
     }
 }
 
