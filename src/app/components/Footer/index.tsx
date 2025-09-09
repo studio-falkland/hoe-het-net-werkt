@@ -6,7 +6,7 @@ export default function Footer() {
                     <span className="font-bold">Hoe het Net Werkt</span>
                     {' '}
                     is een visualisatie van hoe protocollen, organisaties en infrastructuur samenkomen om ons dagelijkse internet mogelijk te maken.
-                    Het presenteert de resultaten van de call "Internet in Beeld" van het SIDN Fonds.
+                    Het presenteert de resultaten van de call &quot;Internet in Beeld&quot; van het SIDN Fonds.
                 </p>
                 <div className="flex gap-16 mt-12">
                     <div className="flex flex-col gap-2">
