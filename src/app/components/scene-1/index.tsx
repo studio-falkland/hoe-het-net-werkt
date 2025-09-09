@@ -20,7 +20,7 @@ export default function Scene1() {
     return (
         <div className={cn('w-screen h-[2400px] pt-[600px] overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.background}
                         src={background}
@@ -29,16 +29,16 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
-                        className={styles.bohelfAndProps}
+                        className={styles.bookshelfAndProps}
                         src={bookshelfAndProps}
                         alt="Scene 1"
                         fill
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.light}
                         src={light}
@@ -47,7 +47,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.plant}
                         src={plant}
@@ -56,7 +56,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.grandpa}
                         src={grandpa}
@@ -65,7 +65,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.table}
                         src={table}
@@ -74,7 +74,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.chairs}
                         src={chairs}
@@ -83,7 +83,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.box}
                         src={box}
@@ -92,7 +92,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.hands}
                         src={hands}
@@ -101,7 +101,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.props}
                         src={props}
@@ -110,7 +110,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         className={styles.cat}
                         src={cat}
@@ -119,7 +119,7 @@ export default function Scene1() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <div className={cn(styles.appear, 'w-full h-full')}>
+                <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         src={dog}
                         className={styles.dog}

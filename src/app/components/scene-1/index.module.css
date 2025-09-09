@@ -6,7 +6,7 @@
 .cat {
     animation-name: cat;
     animation-timeline: --scene-1-scroll;
-    animation-range: cover 0% cover 70%;
+    animation-range: cover 0% cover 100%;
     animation-fill-mode: both;
     
 }
@@ -42,7 +42,7 @@
 .chairs {
     animation-name: chairs;
     animation-timeline: --scene-1-scroll;
-    animation-range: contain 0% cover 50%;
+    animation-range: cover 0% cover 100%;
     animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -76,18 +76,15 @@
 }
 
 .bookshelfAndProps {
-    animation-name: bookshelfAndProps;
-    animation-timing-function: ease;
+    animation: bookshelfAndProps linear both;
     animation-timeline: --scene-1-scroll;
-    animation-range: cover 0% cover 50%;
-    animation-fill-mode: both;
+    animation-range: cover 0% cover 100%;
 }
 
 .background {
     animation: background linear both;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
 }
 
 .appear {
@@ -112,11 +109,11 @@
 }
 
 @keyframes cat {
-    from {
-        transform: translateY(-500px);
+    25% {
+        transform: translateY(-100px);
     }
-    to {
-        transform: translateY(60px);
+    100% {
+        transform: translateY(0px);
     }
 }
 
