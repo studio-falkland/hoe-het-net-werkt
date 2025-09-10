@@ -15,7 +15,7 @@ export default function Footer() {
                     <span className="font-bold">Hoe het Net Werkt</span>
                     {' '}
                     is een visualisatie van hoe protocollen, organisaties en infrastructuur samenkomen om ons dagelijkse internet mogelijk te maken.
-                    Het presenteert de resultaten van de call &quot;Internet in Beeld&quot; van het SIDN Fonds.
+                    Het presenteert de resultaten van de call &quot;Internet Infrastructuur in Beeld&quot; van het SIDN Fonds.
                 </p>
                 <div className="flex gap-16 mt-12 lg:flex-row flex-col">
                     <div className="flex flex-col gap-2 flex-wrap">
@@ -51,7 +51,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
-                            Deelnemers Internet in Beeld
+                            Deelnemers Internet Infrastructuur in Beeld
                         </span>
                         <div className="flex gap-6 items-center h-16">
                             <a href="https://studio-tast.nl" target="_blank" className="hover:opacity-80 transition-opacity">

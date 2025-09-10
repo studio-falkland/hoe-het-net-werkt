@@ -5,7 +5,7 @@ import bgpTravelGuide from './images/bgp-travel-guide.webp';
 import zijnWeAlAutonoom from './images/zijn-we-al-autonoom.webp';
 import nlStats from './images/nl-stats.png';
 
-export type VisualisationTag = 'bgp' | 'dns' | 'routing' | string;
+export type VisualisationTag = 'bgp' | 'dns' | 'routing' | (string & {});
 
 export interface Visualisation {
     /** The title of the visualisation */
@@ -79,6 +79,7 @@ export const visualisations: Visualisation[] = [
         description: '.nl Stats verzamelt statistieken over het .nl domein.',
         image: nlStats,
         url: 'https://stats.sidnlabs.nl/nl/',
+        tags: ['dns'],
         createdBy: [
             {
                 name: 'SIDN Labs',

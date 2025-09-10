@@ -11,7 +11,7 @@ export default function Visualisation({ visualisation }: VisualisationProps) {
     return (
         <div
             className={cn(
-                'bg-white border-2 rounded-2xl p-6 hover:-translate-y-1 transition-transform flex flex-col gap-4',
+                'bg-white border-2 rounded-2xl p-6 hover:-translate-y-1 transition-transform flex flex-col gap-4 relative',
                 styles['project-card'],
             )}
         >
@@ -19,7 +19,11 @@ export default function Visualisation({ visualisation }: VisualisationProps) {
                 <h2 className="text-2xl font-bold tracking-tight">
                     {visualisation.title}
                 </h2>
-                <img src="/internet-infrastructuur-in-beeld-logo.svg" alt="Internet Infrastructuur In Beeld" className="h-6" />
+                {visualisation.internetInfrastructuurInBeeld && (
+                    <div className="p-2 border rounded-xl absolute -top-6 right-4 bg-white">
+                        <img src="/internet-infrastructuur-in-beeld-logo.svg" alt="Internet Infrastructuur In Beeld" className="h-6" />
+                    </div>
+                )}
             </div>
             <div className="aspect-video bg-gray-100 rounded-lg relative border border-gray-200 overflow-hidden">
                 {visualisation.image && (
