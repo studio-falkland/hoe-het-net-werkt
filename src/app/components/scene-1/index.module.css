@@ -39,11 +39,10 @@
     animation-fill-mode: both;
 }
 
-.chairs {
+.chairLeft, .chairRight {
     animation-name: chairs;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
@@ -75,7 +74,7 @@
     animation-fill-mode: both;
 }
 
-.bookshelfAndProps {
+.bookshelf {
     animation: bookshelfAndProps linear both;
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;

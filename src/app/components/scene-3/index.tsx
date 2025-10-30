@@ -1,7 +1,7 @@
 'use client';
 import ExportedImage from 'next-image-export-optimizer';
 import cn from '@/lib/cn';
-import useTouchAreas, { activeStyle, hoveredStyle } from '@/lib/useTouchAreas';
+import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 import { Layer } from '@/lib/layer';
 
 import styles from './index.module.css';
@@ -130,19 +130,26 @@ export default function Scene3() {
             <div className="aspect-[3/2] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
                 {touchElement}
                 {LAYERS.map((layer) => (
-                    <ExportedImage
+                    <div
                         key={layer.id}
                         className={cn(
-                            layer.id,
-                            styles.layer,
+                            layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                            'absolute inset-0',
                             hoveredTouchArea === layer.id && hoveredStyle,
                             activeTouchArea === layer.id && activeStyle,
                         )}
-                        src={layer.image}
-                        alt={layer.id}
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
+                    >
+                        <ExportedImage
+                            className={cn(
+                                styles.layer,
+                                styles[layer.id],
+                            )}
+                            src={layer.image}
+                            alt={layer.id}
+                            fill
+                            style={{ objectFit: 'contain' }}
+                        />
+                    </div>
                 ))}
             </div>
         </div>

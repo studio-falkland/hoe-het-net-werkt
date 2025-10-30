@@ -2,7 +2,7 @@
 import ExportedImage from 'next-image-export-optimizer';
 import cn from '@/lib/cn';
 import { Layer } from '@/lib/layer';
-import useTouchAreas, { activeStyle, hoveredStyle } from '@/lib/useTouchAreas';
+import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 
 import styles from './index.module.css';
 
@@ -63,6 +63,7 @@ const LAYERS: Layer<Scene1Layer>[] = [
     {
         id: 'box',
         image: box,
+        points: '1288,713 1517,602 1653,670 1650,798 1417,912 1283,845',
     },
     {
         id: 'hands',
@@ -71,6 +72,7 @@ const LAYERS: Layer<Scene1Layer>[] = [
     {
         id: 'props',
         image: props,
+        points: '1217,1118 1347,913 1203,892 1140,930 1090,992 1055,1070',
     },
     {
         id: 'cat',
@@ -90,19 +92,27 @@ export default function Scene1() {
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
                 {touchElement}
                 {LAYERS.map((layer) => (
-                    <ExportedImage
+                    <div
                         key={layer.id}
                         className={cn(
-                            layer.id,
-                            styles.layer,
+                            layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                            'absolute inset-0',
                             hoveredTouchArea === layer.id && hoveredStyle,
                             activeTouchArea === layer.id && activeStyle,
                         )}
-                        src={layer.image}
-                        alt={layer.id}
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
+                    >
+                        <ExportedImage
+                            key={layer.id}
+                            className={cn(
+                                styles.layer,
+                                styles[layer.id],
+                            )}
+                            src={layer.image}
+                            alt={layer.id}
+                            fill
+                            style={{ objectFit: 'contain' }}
+                        />
+                    </div>
                 ))}
             </div>
         </div>
