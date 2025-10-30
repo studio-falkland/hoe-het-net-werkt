@@ -1,3 +1,4 @@
+'use client';
 import { useMemo, useState } from 'react';
 import { Layer } from './layer';
 import styles from './useTouchAreas.module.css';

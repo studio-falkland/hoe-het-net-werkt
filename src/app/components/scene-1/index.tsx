@@ -1,5 +1,8 @@
+'use client';
 import ExportedImage from 'next-image-export-optimizer';
 import cn from '@/lib/cn';
+import { Layer } from '@/lib/layer';
+import useTouchAreas, { activeStyle, hoveredStyle } from '@/lib/useTouchAreas';
 
 import styles from './index.module.css';
 
@@ -18,136 +21,89 @@ import carpet from './images/Final-scene-1-merged_0011_carpet.png';
 import bookshelf from './images/Final-scene-1-merged_0012_booksshelf.png';
 import bg from './images/Final-scene-1-merged_0013_BG.png';
 
+type Scene1Layer = 'bg' | 'carpet' | 'bookshelf' | 'light' | 'plant' | 'grandpa' | 'table' | 'chairLeft' | 'chairRight' | 'box' | 'hands' | 'props' | 'cat' | 'dog';
+
+const LAYERS: Layer<Scene1Layer>[] = [
+    {
+        id: 'bg',
+        image: bg,
+    },
+    {
+        id: 'carpet',
+        image: carpet,
+    },
+    {
+        id: 'bookshelf',
+        image: bookshelf,
+    },
+    {
+        id: 'light',
+        image: light,
+    },
+    {
+        id: 'plant',
+        image: plant,
+    },
+    {
+        id: 'grandpa',
+        image: grandpa,
+    },
+    {
+        id: 'table',
+        image: table,
+    },
+    {
+        id: 'chairLeft',
+        image: chairLeft,
+    },
+    {
+        id: 'chairRight',
+        image: chairRight,
+    },
+    {
+        id: 'box',
+        image: box,
+    },
+    {
+        id: 'hands',
+        image: hands,
+    },
+    {
+        id: 'props',
+        image: props,
+    },
+    {
+        id: 'cat',
+        image: cat,
+    },
+    {
+        id: 'dog',
+        image: dog,
+    },
+];
+
 export default function Scene1() {
+    const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
+
     return (
         <div className={cn('w-screen h-[2400px] pt-[200px] overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
-                <div className={cn(styles.background, 'absolute inset-0')}>
+                {touchElement}
+                {LAYERS.map((layer) => (
                     <ExportedImage
-                        src={bg}
-                        className={styles.bg}
-                        alt="Scene 1"
+                        key={layer.id}
+                        className={cn(
+                            layer.id,
+                            styles.layer,
+                            hoveredTouchArea === layer.id && hoveredStyle,
+                            activeTouchArea === layer.id && activeStyle,
+                        )}
+                        src={layer.image}
+                        alt={layer.id}
                         fill
                         style={{ objectFit: 'contain' }}
                     />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        src={carpet}
-                        className={styles.carpet}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.bookshelf}
-                        src={bookshelf}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.light}
-                        src={light}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.plant}
-                        src={plant}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.grandpa}
-                        src={grandpa}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.table}
-                        src={table}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.chairs}
-                        src={chairLeft}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.chairs}
-                        src={chairRight}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.box}
-                        src={box}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.hands}
-                        src={hands}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.props}
-                        src={props}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        className={styles.cat}
-                        src={cat}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
-                <div className={cn(styles.appear, 'absolute inset-0')}>
-                    <ExportedImage
-                        src={dog}
-                        className={styles.dog}
-                        alt="Scene 1"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
+                ))}
             </div>
         </div>
     );
