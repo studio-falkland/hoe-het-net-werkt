@@ -17,10 +17,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        id: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .next/cache
+            out
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.css') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-
+            ${{ runner.os }}-nextjs-
 
       - name: Lint
         run: npm run lint
@@ -48,13 +67,6 @@ jobs:
           name: build-output
           path: out/
 
-      - name: Configure AWS CLI for Scaleway
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.SCALEWAY_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.SCALEWAY_SECRET_KEY }}
-          aws-region: ${{ secrets.SCALEWAY_REGION }}
-
       - name: Upload to Scaleway Object Storage
         run: |
           aws s3 sync ./out s3://${{ secrets.SCALEWAY_BUCKET_NAME }} \
@@ -62,6 +74,9 @@ jobs:
             --delete \
             --acl public-read
         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.SCALEWAY_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SCALEWAY_SECRET_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.SCALEWAY_REGION }}
           AWS_EC2_METADATA_DISABLED: true
 
       - name: Deployment complete
