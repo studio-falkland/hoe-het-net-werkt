@@ -67,18 +67,16 @@ jobs:
           name: build-output
           path: out/
 
-      - name: Upload to Scaleway Object Storage
+      - name: Configure AWS CLI
         run: |
-          aws s3 sync ./out s3://${{ secrets.SCALEWAY_BUCKET_NAME }} \
-            --endpoint-url=${{ secrets.SCALEWAY_ENDPOINT_URL }} \
+          aws configure set aws_access_key_id ${{ secrets.SCALEWAY_ACCESS_KEY }}
+          aws configure set aws_secret_access_key ${{ secrets.SCALEWAY_SECRET_KEY }}
+          aws configure set region ${{ secrets.SCALEWAY_REGION }}
+
+      - name: Sync to Scaleway Object Storage
+        run: |
+          aws s3 sync out/ s3://${{ secrets.SCALEWAY_BUCKET_NAME }}/ \
+            --endpoint-url https://s3.${{ secrets.SCALEWAY_REGION }}.scw.cloud \
             --delete \
             --acl public-read
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.SCALEWAY_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SCALEWAY_SECRET_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.SCALEWAY_REGION }}
-          AWS_EC2_METADATA_DISABLED: true
-
-      - name: Deployment complete
-        run: echo "Deployment to Scaleway Object Storage completed successfully"
 
