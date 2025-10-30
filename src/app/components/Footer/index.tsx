@@ -7,7 +7,7 @@ export default function Footer() {
                         <path d="M12 0L0 12H24L12 0Z" fill="#f6f6f6" />
                     </pattern>
                 </defs>
-                <rect width="100%" height="12" fill="#d9d9d9" />
+                <rect width="100%" height="12" fill="#e9ebf1" />
                 <rect width="100%" height="12" fill="url(#footer-pattern)" />
             </svg>
             <div className="max-w-7xl mx-auto py-24 px-4">
@@ -26,7 +26,7 @@ export default function Footer() {
                             <a href="https://falkland.studio" target="_blank" className="hover:opacity-80 transition-opacity">
                                 <img src="/falkland-logo.svg" alt="Falkland" className="w-24" />
                             </a>
-                            <p>Yaël van Engelen</p>
+                            <p className="font-semibold tracking-tight">Yaël van Engelen</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-2 flex-wrap">
@@ -57,7 +57,7 @@ export default function Footer() {
                             <a href="https://studio-tast.nl" target="_blank" className="hover:opacity-80 transition-opacity">
                                 <img src="/studio-tast-logo.svg" alt="SIDN Labs" className="w-30" />
                             </a>
-                            <p>Henrik van Leeuwen</p>
+                            <p className="font-semibold tracking-tight">Henrik van Leeuwen</p>
                             <a href="https://falkland.studio" target="_blank" className="hover:opacity-80 transition-opacity">
                                 <img src="/falkland-logo.svg" alt="Falkland" className="w-24" />
                             </a>

@@ -35,7 +35,7 @@
 .box {
     animation-name: box;
     animation-timeline: --scene-1-scroll;
-    animation-range: cover 0% cover 100%;
+    animation-range: cover 10% cover 60%;
     animation-fill-mode: both;
 }
 
@@ -137,16 +137,20 @@
 
 @keyframes hands {
     from {
-        transform: translateY(-200px);
+        transform: translateY(0);
     }
     to {
         transform: translateY(0);
     }
 }
 
+:root {
+    --box-movement-percentage: 5%;
+}
+
 @keyframes box {
     from {
-        transform: translateY(-400px);
+        transform: translate(calc(var(--box-movement-percentage)), calc(var(--box-movement-percentage) * tan(26.4deg) * 1.5 * -1));
     }
     to {
         transform: translateY(0);
@@ -173,7 +177,7 @@
 
 @keyframes grandpa {
     from {
-        transform: translateY(-200px);
+        transform: translateY(0px);
     }
     to {
         transform: translateY(0);

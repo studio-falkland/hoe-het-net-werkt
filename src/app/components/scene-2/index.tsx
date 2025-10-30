@@ -13,19 +13,11 @@ import mailbox from './images/Final-scene-2-merged_0006_mailbox.png';
 import tree from './images/Final-scene-2-merged_0007_tree.png';
 import platform from './images/Final-scene-2-merged_0008_platform.png';
 import bg from './images/Final-scene-2-merged_0009_bg.png';
-import background from './images/Final-scene-2-merged_0010_Background.png';
 
 export default function Scene2() {
     return (
-        <div className={cn('w-screen h-[2400px] pt-[600px] overflow-hidden flex justify-center', styles.root)}>
+        <div className={cn('w-screen h-[1600px] overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
-                <ExportedImage
-                    className={styles.background}
-                    src={background}
-                    alt="Scene 2"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                />
                 <ExportedImage
                     className={styles.bg}
                     src={bg}

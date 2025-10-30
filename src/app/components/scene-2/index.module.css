@@ -7,66 +7,77 @@
     animation-name: background;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .bg {
     animation-name: bg;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .platform {
     animation-name: platform;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .tree {
     animation-name: tree;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .road {
     animation-name: road;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .mailbox {
     animation-name: mailbox;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .deliveryGuy {
     animation-name: deliveryGuy;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .van {
     animation-name: van;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 60%;
+    animation-fill-mode: both;
 }
 
 .arrows {
     animation-name: arrows;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .cabinet {
     animation-name: cabinet;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 .grandpa {
     animation-name: grandpa;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 100%;
+    animation-fill-mode: both;
 }
 
 @keyframes background {
@@ -133,7 +144,7 @@
 }
 
 :root {
-    --van-movement-percentage: 40%;
+    --van-movement-percentage: 20%;
 }
 
 @keyframes van {
