@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { IBM_Plex_Serif, Inter } from 'next/font/google';
 import './globals.css';
 import Menu from './components/Menu';
+import PreviewBanner from './components/PreviewBanner';
 
 const inter = Inter({
     variable: '--font-inter',
@@ -28,6 +29,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${inter.variable} ${ibmPlexSerif.variable}`}>
             <body className="antialiased">
+                <PreviewBanner />
                 <Menu />
                 {children}
             </body>
