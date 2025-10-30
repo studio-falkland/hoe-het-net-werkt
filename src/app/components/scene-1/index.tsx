@@ -16,11 +16,21 @@ import plant from './images/Final-scene-1-merged_0009_plant.png';
 import light from './images/Final-scene-1-merged_0010_light.png';
 import carpet from './images/Final-scene-1-merged_0011_carpet.png';
 import bookshelf from './images/Final-scene-1-merged_0012_booksshelf.png';
+import bg from './images/Final-scene-1-merged_0013_BG.png';
 
 export default function Scene1() {
     return (
         <div className={cn('w-screen h-[2400px] pt-[200px] overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
+                <div className={cn(styles.background, 'absolute inset-0')}>
+                    <ExportedImage
+                        src={bg}
+                        className={styles.bg}
+                        alt="Scene 1"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                    />
+                </div>
                 <div className={cn(styles.appear, 'absolute inset-0')}>
                     <ExportedImage
                         src={carpet}
