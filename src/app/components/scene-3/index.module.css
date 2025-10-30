@@ -1,0 +1,433 @@
+.root {
+    view-timeline-name: --scene-3-scroll;
+    view-timeline-axis: block;
+}
+
+.layer {
+    /* transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out !important; */
+    animation-fill-mode: both;
+}
+
+.bgElements {
+    /* Final-scene-3-merged_0023_bg-elements.png */
+    animation-name: bgElements;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 5% cover 10%;
+}
+
+.roads {
+    /* Final-scene-3-merged_0022_roads.png */
+    animation-name: roads;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 8% cover 13%;
+}
+
+.uni {
+    /* Final-scene-3-merged_0021_uni.png */
+    animation-name: uni;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 40%;
+}
+
+.island10 {
+    /* Final-scene-3-merged_0020_Island-10.png */
+    animation-name: island10;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 40%;
+}
+
+.island9 {
+    /* Final-scene-3-merged_0019_Island-9.png */
+    animation-name: island9;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 30%;
+}
+
+.island8 {
+    /* Final-scene-3-merged_0018_Island-8.png */
+    animation-name: island8;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 20% cover 45%;
+}
+
+.island7 {
+    /* Final-scene-3-merged_0017_Island-7.png */
+    animation-name: island7;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 35% cover 60%;
+}
+
+.island6Email2 {
+    /* Final-scene-3-merged_0016_Island-6-(email-2).png */
+    animation-name: island6Email2;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 35% cover 60%;
+}
+
+.ixp {
+    /* Final-scene-3-merged_0015_IXP.png */
+    animation-name: ixp;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 5% cover 10%;
+}
+
+.mainIsland {
+    /* Final-scene-3-merged_0014_Main-island.png */
+    animation-name: mainIsland;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 20% cover 45%;
+}
+
+.boat {
+    /* Final-scene-3-merged_0013_Boat.png */
+    animation-name: boat;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 20% cover 45%;
+}
+
+.touringBus {
+    /* Final-scene-3-merged_0012_Touring-bus.png */
+    animation-name: touringBus;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 20% cover 45%;
+}
+
+.trainstationNtp {
+    /* Final-scene-3-merged_0011_Trainstation-(NTP).png */
+    animation-name: trainstationNtp;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 40%;
+}
+
+.sidn {
+    /* Final-scene-3-merged_0010_SIDN.png */
+    animation-name: sidn;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 40%;
+}
+
+.warehouses {
+    /* Final-scene-3-merged_0009_warehouses.png */
+    animation-name: warehouses;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 25% cover 50%;
+}
+
+.island5 {
+    /* Final-scene-3-merged_0008_Island-5.png */
+    animation-name: island5;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 30% cover 55%;
+}
+
+.island4 {
+    /* Final-scene-3-merged_0007_Island-4.png */
+    animation-name: island4;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 20% cover 45%;
+}
+
+.island3 {
+    /* Final-scene-3-merged_0006_Island-3.png */
+    animation-name: island3;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 40%;
+}
+
+.island2 {
+    /* Final-scene-3-merged_0005_Island-2.png */
+    animation-name: island2;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 35%;
+}
+
+.island1Email1 {
+    /* Final-scene-3-merged_0004_island-1-(email-1).png */
+    animation-name: island1Email1;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 15% cover 30%;
+}
+
+.trucks {
+    /* Final-scene-3-merged_0003_trucks.png */
+    animation-name: trucks;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 35% cover 60%;
+    
+    &:hover {
+        filter: hue-rotate(176deg) saturate(10) brightness(1.05);
+    }
+}
+
+@keyframes bgElements {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes roads {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes uni {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island10 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island9 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island8 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island7 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island6Email2 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ixp {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes mainIsland {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes boat {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes touringBus {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes trainstationNtp {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes sidn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes warehouses {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island5 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island4 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island3 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island2 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes island1Email1 {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes trucks {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

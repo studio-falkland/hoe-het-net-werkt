@@ -5,6 +5,7 @@ import Scene2 from './components/scene-2';
 import TextBox from './components/TextBox';
 import Mouse from './components/Mouse';
 import Visualisations from './components/Visualisations';
+import Scene3 from './components/scene-3';
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             </div>
             <Scene1 />
             <Scene2 />
+            <Scene3 />
             <Visualisations />
             <Footer />
         </div>
