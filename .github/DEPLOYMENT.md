@@ -18,12 +18,7 @@ You need to configure the following secrets in your GitHub repository settings (
    - The region where your bucket is located
    - Example: `nl-ams` (Amsterdam), `fr-par` (Paris), `pl-waw` (Warsaw)
 
-4. **SCALEWAY_ENDPOINT_URL**
-   - The S3-compatible endpoint URL for your region
-   - Format: `https://s3.<region>.scw.cloud`
-   - Example: `https://s3.nl-ams.scw.cloud` or `https://s3.fr-par.scw.cloud`
-
-5. **SCALEWAY_BUCKET_NAME**
+4. **SCALEWAY_BUCKET_NAME**
    - The name of your Object Storage bucket
    - Example: `my-website-bucket`
 
