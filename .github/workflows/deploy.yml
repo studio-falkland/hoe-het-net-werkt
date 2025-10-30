@@ -1,0 +1,69 @@
+name: Build and Deploy to Scaleway
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload build artifacts
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: out/
+          retention-days: 1
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: out/
+
+      - name: Configure AWS CLI for Scaleway
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.SCALEWAY_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.SCALEWAY_SECRET_KEY }}
+          aws-region: ${{ secrets.SCALEWAY_REGION }}
+
+      - name: Upload to Scaleway Object Storage
+        run: |
+          aws s3 sync ./out s3://${{ secrets.SCALEWAY_BUCKET_NAME }} \
+            --endpoint-url=${{ secrets.SCALEWAY_ENDPOINT_URL }} \
+            --delete \
+            --acl public-read
+        env:
+          AWS_EC2_METADATA_DISABLED: true
+
+      - name: Deployment complete
+        run: echo "Deployment to Scaleway Object Storage completed successfully"
+
