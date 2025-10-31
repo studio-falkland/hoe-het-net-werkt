@@ -126,7 +126,7 @@ export default function Scene3() {
     const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
 
     return (
-        <div className={cn('w-screen h-[3200px] pt-[200px] overflow-hidden flex justify-center', styles.root)}>
+        <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
                 {touchElement}
                 {LAYERS.map((layer) => (

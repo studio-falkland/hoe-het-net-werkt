@@ -88,7 +88,7 @@ export default function Scene1() {
     const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
 
     return (
-        <div className={cn('w-screen h-[2400px] pt-[200px] overflow-hidden flex justify-center', styles.root)}>
+        <div className={cn('w-screen pt-[200px] overflow-hidden flex justify-center', styles.root)}>
             <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
                 {touchElement}
                 {LAYERS.map((layer) => (
@@ -99,19 +99,22 @@ export default function Scene1() {
                             'absolute inset-0',
                             hoveredTouchArea === layer.id && hoveredStyle,
                             activeTouchArea === layer.id && activeStyle,
+                            styles.layer,
                         )}
                     >
-                        <ExportedImage
-                            key={layer.id}
-                            className={cn(
-                                styles.layer,
-                                styles[layer.id],
-                            )}
-                            src={layer.image}
-                            alt={layer.id}
-                            fill
-                            style={{ objectFit: 'contain' }}
-                        />
+                        <div className={cn(styles.appear, 'absolute inset-0')}>
+                            <ExportedImage
+                                key={layer.id}
+                                className={cn(
+                                    styles.layer,
+                                    styles[layer.id],
+                                )}
+                                src={layer.image}
+                                alt={layer.id}
+                                fill
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </div>
                     </div>
                 ))}
             </div>

@@ -13,7 +13,7 @@ const [
 
 export default function Visualisations() {
     return (
-        <div className="max-w-7xl mx-auto py-24 px-4">
+        <div className="max-w-7xl mx-auto mt-60 py-24 px-4">
             <h1 className="text-4xl font-bold text-center tracking-tighter">Visualisaties van het internet</h1>
             <p className="text-center text-gray-500 text-2xl mt-8 max-w-2xl mx-auto">Deze visualisaties helpen je beter te begrijpen hoe bepaalde aspecten van het internet in elkaar steken.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">

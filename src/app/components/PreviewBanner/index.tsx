@@ -1,8 +1,15 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const LOCAL_STORAGE_KEY = 'hoe-het-net-werkt-preview-banner-dismissed';
+const LOCAL_STORAGE_VALUE = typeof window !== 'undefined' ? window?.localStorage.getItem(LOCAL_STORAGE_KEY) ?? 'true' : 'true';
 
 export default function PreviewBanner() {
-    const [isDismissed, setIsDismissed] = useState(false);
+    const [isDismissed, setIsDismissed] = useState<boolean>(LOCAL_STORAGE_VALUE === 'true');
+
+    useEffect(() => {
+        window.localStorage.setItem(LOCAL_STORAGE_KEY, isDismissed.toString());
+    }, [isDismissed]);
 
     if (isDismissed) {
         return null;

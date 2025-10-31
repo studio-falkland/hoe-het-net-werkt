@@ -57,7 +57,11 @@ export default function Footer() {
                             <a href="https://studio-tast.nl" target="_blank" className="hover:opacity-80 transition-opacity">
                                 <img src="/studio-tast-logo.svg" alt="SIDN Labs" className="w-30" />
                             </a>
-                            <p className="font-semibold tracking-tight">Henrik van Leeuwen</p>
+                            <p className="font-semibold tracking-tight leading-4 text-sm">
+                                Henrik van Leeuwen
+                                <br />
+                                & Pascal de Man
+                            </p>
                             <a href="https://falkland.studio" target="_blank" className="hover:opacity-80 transition-opacity">
                                 <img src="/falkland-logo.svg" alt="Falkland" className="w-24" />
                             </a>

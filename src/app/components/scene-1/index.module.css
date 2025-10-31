@@ -8,7 +8,6 @@
     animation-timeline: --scene-1-scroll;
     animation-range: cover 0% cover 100%;
     animation-fill-mode: both;
-    
 }
 
 .dog {
@@ -87,23 +86,63 @@
 }
 
 .appear {
-    animation: appear 1s ease-in-out backwards;
-    animation-delay: 1s;
+    animation: appear 1s ease-in-out both;
+    animation-delay: 0.2s;
+}
 
-    &:nth-child(n + 1) {
-        animation-delay: 1.2s;
+.layer {
+    &:has(.hands), &:has(.grandpa) {
+        .appear {
+            animation-delay: 0.8s !important;
+        }
     }
 
-    &:nth-child(n + 2) {
-        animation-delay: 1.4s;
+    &:nth-child(8n + 1) {
+        .appear {
+            animation-delay: 0.4s;
+        }
     }
 
-    &:nth-child(n + 3) {
-        animation-delay: 1.6s;
+    &:nth-child(8n + 2) {
+        .appear {
+            animation-delay: 0.6s;
+        }
+    }
+
+    &:nth-child(8n + 3) {
+        .appear {
+            animation-delay: 0.8s;
+        }
     }
     
-    &:nth-child(n + 4) {
-        animation-delay: 1.8s;
+    &:nth-child(8n + 4) {
+        .appear {
+            animation-delay: 1s;
+        }
+    }
+
+    &:nth-child(8n + 5) {
+        .appear {
+            animation-delay: 1.2s;
+        }
+    }
+
+    &:nth-child(8n + 6) {
+        .appear {
+            animation-delay: 1.4s;
+        }
+    }
+
+    &:nth-child(8n + 7) {
+        .appear {
+            animation-delay: 1.6s;
+        }
+    }
+    
+    &:nth-child(8n + 8) {
+        .appear {
+            animation-delay: 1.8s;
+        }
     }
 }
 

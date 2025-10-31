@@ -3,182 +3,99 @@
     view-timeline-axis: block;
 }
 
-.background {
-    animation-name: background;
-    animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
+.layer {
     animation-fill-mode: both;
 }
 
 .bg {
-    animation-name: bg;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 0% cover 10%;
 }
 
 .platform {
-    animation-name: platform;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 25% cover 30%;
 }
 
 .tree {
-    animation-name: tree;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 10% cover 15%;
 }
 
 .road {
-    animation-name: road;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 5% cover 15%;
 }
 
 .mailbox {
-    animation-name: mailbox;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 35% cover 45%;
 }
 
 .deliveryGuy {
-    animation-name: deliveryGuy;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 45% cover 55%;
 }
 
 .van {
     animation-name: van;
     animation-timeline: --scene-2-scroll;
     animation-range: cover 0% cover 60%;
-    animation-fill-mode: both;
 }
 
 .arrows {
-    animation-name: arrows;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 35% cover 45%;
 }
 
 .cabinet {
-    animation-name: cabinet;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 40% cover 50%;
 }
 
 .grandpa {
-    animation-name: grandpa;
+    animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 0% cover 100%;
-    animation-fill-mode: both;
+    animation-range: cover 50% cover 60%;
 }
 
-@keyframes background {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes bg {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes platform {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes tree {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes road {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes mailbox {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes deliveryGuy {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
 
 :root {
     --van-movement-percentage: 20%;
 }
 
+@keyframes appearAndFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 @keyframes van {
-    from {
+    0% {
+        opacity: 0;
         transform: translate(calc(var(--van-movement-percentage) * -1), calc(var(--van-movement-percentage) * tan(26.4deg) * 1.5 * -1));
     }
-    to {
-        transform: translate(0, 0);
+    50% {
+        opacity: 1;
     }
-}
-
-@keyframes arrows {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes cabinet {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
-    }
-}
-
-@keyframes grandpa {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(0, 0);
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
