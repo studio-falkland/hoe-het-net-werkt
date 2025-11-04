@@ -27,6 +27,14 @@ export default function Visualisations() {
                     <Visualisation key={`other-${i}`} visualisation={v} />
                 ))}
             </div>
+            <h2 className="text-3xl font-bold tracking-tight text-center mt-24">Mis je een visualisatie?</h2>
+            <p className="text-gray-500 text-xl text-center mt-4 mx-auto max-w-2xl">
+                Wil je een visualisatie toevoegen aan deze lijst? We accepteren pull requests! Draag bij aan Hoe het Net Werkt in onze GitHub repository.
+                {' '}
+                <a href="https://github.com/studio-falkland/hoe-het-net-werkt" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">
+                    Stuur een PR!
+                </a>
+            </p>
         </div>
     );
 }

@@ -20,7 +20,7 @@ export default function Visualisation({ visualisation }: VisualisationProps) {
                     {visualisation.title}
                 </h2>
                 {visualisation.internetInfrastructuurInBeeld && (
-                    <div className="p-2 border rounded-xl absolute -top-6 right-4 bg-white">
+                    <div className="p-2 border rounded-lg absolute -top-6 right-4 bg-white">
                         <img src="/internet-infrastructuur-in-beeld-logo.svg" alt="Internet Infrastructuur In Beeld" className="h-6" />
                     </div>
                 )}

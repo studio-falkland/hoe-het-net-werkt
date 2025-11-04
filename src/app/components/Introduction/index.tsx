@@ -28,7 +28,7 @@ export default function Introduction({ className, ...props }: IntroductionProps)
                     </h1>
                 </div>
             </div>
-            <div className="flex items-center justify-center mx-auto gap-8 mt-12 text-center tracking-tight text-lg">
+            <div className="flex items-center justify-center mx-auto gap-8 mt-12 text-center text-lg">
                 <a
                     href="#story"
                     className="border bg-white border-[#D7DCED] hover:border-[#B2B6D8] p-4 w-64 h-64 block rounded-lg relative hover:scale-[1.01] hover:-translate-y-1 transition-transform shadow hover:shadow-lg"
@@ -81,7 +81,7 @@ export default function Introduction({ className, ...props }: IntroductionProps)
                     <div className="absolute inset-0 bg-linear-to-b from-transparent to-white rounded-lg" />
                     <div className="absolute bottom-0 left-0 right-0 text-center p-4">
                         <p className="font-semibold">Bekijk de visualisaties</p>
-                        <p className="text-xs text-gray-500">Een database met rijke visualisaties van en over het internet.</p>
+                        <p className="text-xs tracking-wide text-gray-500">Een database met rijke visualisaties van en over het internet.</p>
                     </div>
                 </a>
             </div>
