@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Layer } from './layer';
 import styles from './useTouchAreas.module.css';
 
@@ -24,6 +24,17 @@ export default function useTouchAreas<T extends string = string>({
     const touchLayers = useMemo(() => {
         return layers.filter((layer) => layer.points);
     }, [layers]);
+
+    const handleClick = useCallback((layerId: T) => {
+        return () => {
+            if (activeTouchArea === layerId) {
+                setActiveTouchArea(null);
+            }
+            else {
+                setActiveTouchArea(layerId);
+            }
+        };
+    }, [activeTouchArea]);
 
     useEffect(() => {
         // Listen for escape key to close the active touch area
@@ -64,12 +75,12 @@ export default function useTouchAreas<T extends string = string>({
                         className="cursor-pointer"
                         onMouseEnter={() => setHoveredTouchArea(layer.id)}
                         onMouseLeave={() => setHoveredTouchArea(null)}
-                        onClick={() => setActiveTouchArea(layer.id)}
+                        onClick={handleClick(layer.id)}
                     />
                 ))}
             </svg>
         );
-    }, [touchLayers, layers]);
+    }, [touchLayers, layers, handleClick]);
 
     return {
         hoveredTouchArea,
