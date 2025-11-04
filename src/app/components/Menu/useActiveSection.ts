@@ -29,4 +29,3 @@ export function useActiveSection() {
 
     return activeSection;
 }
-
