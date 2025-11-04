@@ -99,7 +99,7 @@ export default function Scene1() {
                             'absolute inset-0',
                             hoveredTouchArea === layer.id && hoveredStyle,
                             activeTouchArea === layer.id && activeStyle,
-                            styles.layer,
+                            styles.container,
                         )}
                     >
                         <div className={cn(styles.appear, 'absolute inset-0')}>

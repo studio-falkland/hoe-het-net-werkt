@@ -4,6 +4,7 @@
 }
 
 .layer {
+    composes: layer from global;
     animation-fill-mode: both;
 }
 
