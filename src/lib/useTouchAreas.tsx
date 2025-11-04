@@ -60,7 +60,7 @@ export default function useTouchAreas<T extends string = string>({
                     <polygon
                         key={layer.id as string}
                         points={layer.points}
-                        fill="#ff000022"
+                        fill="#ff000000"
                         className="cursor-pointer"
                         onMouseEnter={() => setHoveredTouchArea(layer.id)}
                         onMouseLeave={() => setHoveredTouchArea(null)}

@@ -29,7 +29,6 @@ import island10 from './images/Final-scene-3-merged_0019_Island-10.png';
 import uni from './images/Final-scene-3-merged_0020_uni.png';
 import roads from './images/Final-scene-3-merged_0021_roads.png';
 import bgElements from './images/Final-scene-3-merged_0022_bg.png';
-import CoordinatePicker from '../CoordinatePicker';
 
 export type Scene3Layer = 'bgElements' | 'roads' | 'uni' | 'lighthouse' | 'island10' | 'island9' | 'island8' | 'island7' | 'island6Email2' | 'island6' | 'ixp' | 'mainIsland' | 'boat' | 'touringBus' | 'trainstationNtp' | 'sidn' | 'warehouses' | 'island5' | 'island4' | 'island3' | 'island2' | 'island1Email1' | 'trucks';
 
@@ -163,7 +162,6 @@ export default function Scene3() {
                         />
                     </div>
                 ))}
-                <CoordinatePicker image={bgElements} />
             </div>
         </div>
     );
