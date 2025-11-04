@@ -14,7 +14,7 @@ import van from './images/Final-scene-2-merged_0005_van.png';
 import road from './images/Final-scene-2-merged_0006_road.png';
 import mailbox from './images/Final-scene-2-merged_0007_mailbox.png';
 import tree from './images/Final-scene-2-merged_0008_tree.png';
-import bg from './images/Final-scene-2-merged_0009_BG.png';
+import bg from './images/Final-scene-2-merged_0009_bg.png';
 import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 
 type Scene2Layer = 'bg' | 'tree' | 'mailbox' | 'road' | 'van' | 'deliveryGuy' | 'arrows' | 'cabinet' | 'grandpa' | 'bush';
