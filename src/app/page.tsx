@@ -15,10 +15,14 @@ export default function Home() {
                 <Colofon />
                 <Mouse />
             </div>
-            <Scene1 />
-            <Scene2 />
-            <Scene3 />
-            <Visualisations />
+            <div id="story">
+                <Scene1 />
+                <Scene2 />
+                <Scene3 />
+            </div>
+            <div id="visualisations">
+                <Visualisations />
+            </div>
             <Footer />
         </div>
     );

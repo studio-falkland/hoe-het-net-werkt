@@ -8,8 +8,8 @@ export default function Menu() {
                     <img src="/hoe-het-net-werkt-logo.svg" alt="Hoe het Net Werkt" className="h-24" />
                 </div>
                 <div className="ml-auto flex items-center gap-8 font-medium text-lg tracking-tight">
-                    <Link href="/">Verhaal</Link>
-                    <Link href="/">Visualisaties</Link>
+                    <Link href="#story">Verhaal</Link>
+                    <Link href="#visualisations">Visualisaties</Link>
                 </div>
             </div>
         </div>
