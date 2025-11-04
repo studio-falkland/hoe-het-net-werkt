@@ -5,28 +5,24 @@ import { Layer } from '@/lib/layer';
 
 import styles from './index.module.css';
 
-import grandpa from './images/Final-scene-2-merged_0000_grandpa.png';
-import cabinet from './images/Final-scene-2-merged_0001_cabinet.png';
-import arrows from './images/Final-scene-2-merged_0002_arrows.png';
-import deliveryGuy from './images/Final-scene-2-merged_0003_delivery-guy.png';
-import van from './images/Final-scene-2-merged_0004_van.png';
-import road from './images/Final-scene-2-merged_0005_road.png';
-import mailbox from './images/Final-scene-2-merged_0006_mailbox.png';
-import tree from './images/Final-scene-2-merged_0007_tree.png';
-import platform from './images/Final-scene-2-merged_0008_platform.png';
-import bg from './images/Final-scene-2-merged_0009_bg.png';
+import bush from './images/Final-scene-2-merged_0000_bush.png';
+import grandpa from './images/Final-scene-2-merged_0001_grandpa.png';
+import cabinet from './images/Final-scene-2-merged_0002_cabinet.png';
+import arrows from './images/Final-scene-2-merged_0003_arrows.png';
+import deliveryGuy from './images/Final-scene-2-merged_0004_delivery-guy.png';
+import van from './images/Final-scene-2-merged_0005_van.png';
+import road from './images/Final-scene-2-merged_0006_road.png';
+import mailbox from './images/Final-scene-2-merged_0007_mailbox.png';
+import tree from './images/Final-scene-2-merged_0008_tree.png';
+import bg from './images/Final-scene-2-merged_0009_BG.png';
 import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 
-type Scene2Layer = 'bg' | 'platform' | 'tree' | 'mailbox' | 'road' | 'van' | 'deliveryGuy' | 'arrows' | 'cabinet' | 'grandpa';
+type Scene2Layer = 'bg' | 'tree' | 'mailbox' | 'road' | 'van' | 'deliveryGuy' | 'arrows' | 'cabinet' | 'grandpa' | 'bush';
 
 const LAYERS: Layer<Scene2Layer>[] = [
     {
         id: 'bg',
         image: bg,
-    },
-    {
-        id: 'platform',
-        image: platform,
     },
     {
         id: 'tree',
@@ -35,7 +31,6 @@ const LAYERS: Layer<Scene2Layer>[] = [
     {
         id: 'mailbox',
         image: mailbox,
-        points: '558,1150 560,770 988,555 1068,595 1068,980 650,1193',
     },
     {
         id: 'road',
@@ -57,11 +52,16 @@ const LAYERS: Layer<Scene2Layer>[] = [
     {
         id: 'cabinet',
         image: cabinet,
+        points: '558,1150 560,770 988,555 1068,595 1068,980 650,1193',
     },
     {
         id: 'grandpa',
         image: grandpa,
         points: '897,1100 955,1132 1023,1058 1042,1052 983,993 897,1037',
+    },
+    {
+        id: 'bush',
+        image: bush,
     },
 ];
 

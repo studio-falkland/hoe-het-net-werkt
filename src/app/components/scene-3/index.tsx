@@ -6,29 +6,32 @@ import { Layer } from '@/lib/layer';
 
 import styles from './index.module.css';
 
-import trucks from './images/Final-scene-3-merged_0003_trucks.png';
-import island1Email1 from './images/Final-scene-3-merged_0004_island-1-(email-1).png';
-import island2 from './images/Final-scene-3-merged_0005_Island-2.png';
-import island3 from './images/Final-scene-3-merged_0006_Island-3.png';
-import island4 from './images/Final-scene-3-merged_0007_Island-4.png';
-import island5 from './images/Final-scene-3-merged_0008_Island-5.png';
-import warehouses from './images/Final-scene-3-merged_0009_warehouses.png';
-import sidn from './images/Final-scene-3-merged_0010_SIDN.png';
-import trainstationNtp from './images/Final-scene-3-merged_0011_Trainstation-(NTP).png';
-import touringBus from './images/Final-scene-3-merged_0012_Touring-bus.png';
-import boat from './images/Final-scene-3-merged_0013_Boat.png';
-import mainIsland from './images/Final-scene-3-merged_0014_Main-island.png';
-import ixp from './images/Final-scene-3-merged_0015_IXP.png';
-import island6Email2 from './images/Final-scene-3-merged_0016_Island-6-(email-2).png';
-import island7 from './images/Final-scene-3-merged_0017_Island-7.png';
-import island8 from './images/Final-scene-3-merged_0018_Island-8.png';
-import island9 from './images/Final-scene-3-merged_0019_Island-9.png';
-import island10 from './images/Final-scene-3-merged_0020_Island-10.png';
-import uni from './images/Final-scene-3-merged_0021_uni.png';
-import roads from './images/Final-scene-3-merged_0022_roads.png';
-import bgElements from './images/Final-scene-3-merged_0023_bg-elements.png';
+import trucks from './images/Final-scene-3-merged_0000_trucks.png';
+import boat from './images/Final-scene-3-merged_0001_boats.png';
+import island1Email1 from './images/Final-scene-3-merged_0002_island-1-(email-1).png';
+import island2 from './images/Final-scene-3-merged_0003_Island-2.png';
+import island3 from './images/Final-scene-3-merged_0004_Island-3.png';
+import island4 from './images/Final-scene-3-merged_0005_Island-3.png';
+import island5 from './images/Final-scene-3-merged_0006_Island-4.png';
+import island6 from './images/Final-scene-3-merged_0007_Island-5.png';
+import warehouses from './images/Final-scene-3-merged_0008_warehouses.png';
+import sidn from './images/Final-scene-3-merged_0009_SIDN.png';
+import trainstationNtp from './images/Final-scene-3-merged_0010_Trainstation-(NTP).png';
+import touringBus from './images/Final-scene-3-merged_0011_Touring-bus.png';
+import mainIsland from './images/Final-scene-3-merged_0012_Main-island.png';
+import ixp from './images/Final-scene-3-merged_0013_IXP.png';
+import island6Email2 from './images/Final-scene-3-merged_0014_Island-6-(email-2).png';
+import island7 from './images/Final-scene-3-merged_0015_Island-7.png';
+import island8 from './images/Final-scene-3-merged_0016_Island-8.png';
+import island9 from './images/Final-scene-3-merged_0017_Island-9.png';
+import lighthouse from './images/Final-scene-3-merged_0018_lighthouse.png';
+import island10 from './images/Final-scene-3-merged_0019_Island-10.png';
+import uni from './images/Final-scene-3-merged_0020_uni.png';
+import roads from './images/Final-scene-3-merged_0021_roads.png';
+import bgElements from './images/Final-scene-3-merged_0022_bg.png';
+import CoordinatePicker from '../CoordinatePicker';
 
-export type Scene3Layer = 'bgElements' | 'roads' | 'uni' | 'island10' | 'island9' | 'island8' | 'island7' | 'island6Email2' | 'ixp' | 'mainIsland' | 'boat' | 'touringBus' | 'trainstationNtp' | 'sidn' | 'warehouses' | 'island5' | 'island4' | 'island3' | 'island2' | 'island1Email1' | 'trucks';
+export type Scene3Layer = 'bgElements' | 'roads' | 'uni' | 'lighthouse' | 'island10' | 'island9' | 'island8' | 'island7' | 'island6Email2' | 'island6' | 'ixp' | 'mainIsland' | 'boat' | 'touringBus' | 'trainstationNtp' | 'sidn' | 'warehouses' | 'island5' | 'island4' | 'island3' | 'island2' | 'island1Email1' | 'trucks';
 
 const LAYERS: Layer<Scene3Layer>[] = [
     {
@@ -43,6 +46,11 @@ const LAYERS: Layer<Scene3Layer>[] = [
         id: 'uni',
         points: '1521,327 1914,526 2154,407 1990,323 1989,274 1777,169 1586,271 1584,297',
         image: uni,
+    },
+    {
+        id: 'lighthouse',
+        image: lighthouse,
+        points: '1299,2061 1347,2018 1354,1920 1353,1889 1378,1859 1403,1889 1405,1914 1398,1923 1405,2009 1435,2027 1396,2054',
     },
     {
         id: 'island10',
@@ -97,6 +105,10 @@ const LAYERS: Layer<Scene3Layer>[] = [
         image: warehouses,
     },
     {
+        id: 'island6',
+        image: island6,
+    },
+    {
         id: 'island5',
         image: island5,
     },
@@ -127,7 +139,7 @@ export default function Scene3() {
 
     return (
         <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
-            <div className="aspect-[3/2] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
+            <div className="aspect-[6/5] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
                 {touchElement}
                 {LAYERS.map((layer) => (
                     <div
@@ -151,6 +163,7 @@ export default function Scene3() {
                         />
                     </div>
                 ))}
+                <CoordinatePicker image={bgElements} />
             </div>
         </div>
     );

@@ -68,6 +68,11 @@
     animation-range: cover 50% cover 60%;
 }
 
+.bush {
+    animation-name: appearAndFade;
+    animation-timeline: --scene-2-scroll;
+    animation-range: cover 50% cover 60%;
+}
 
 :root {
     --van-movement-percentage: 20%;
