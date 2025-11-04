@@ -92,7 +92,9 @@
 
 .layer {
     composes: layer from global;
+}
 
+.container {
     &:has(.hands), &:has(.grandpa) {
         .appear {
             animation-delay: 0.8s !important;
