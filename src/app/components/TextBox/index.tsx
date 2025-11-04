@@ -1,0 +1,43 @@
+import cn from '@/lib/cn';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import styles from './index.module.css';
+import { StaticImageData } from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
+export type TextBoxProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
+    image?: StaticImageData;
+    imagePosition?: 'left' | 'right';
+};
+
+export default function TextBox({
+    className, image, children, imagePosition = 'left', ...props
+}: TextBoxProps) {
+    return (
+        <div className="flex justify-center w-full">
+            <div
+                className={cn(
+                    className,
+                    'rounded-2xl text-lg md:text-xl border-2 bg-white max-w-2xl m-2 flex font-medium',
+                    styles['text-box-shadow'],
+                    image
+                        ? (imagePosition === 'left'
+                                ? 'text-left'
+                                : 'text-right'
+                            )
+                        : 'text-center',
+                    imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row',
+                )}
+                {...props}
+            >
+                {image && (
+                    <div className="relative w-128">
+                        <ExportedImage src={image} alt="TextBox" className="w-64 h-[220px] absolute bottom-0 left-0 right-0 object-cover rounded-bl-xl" />
+                    </div>
+                )}
+                <div className="p-8">
+                    {children}
+                </div>
+            </div>
+        </div>
+    );
+}

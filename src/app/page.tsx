@@ -1,10 +1,11 @@
 import Colofon from './components/Colofon';
 import Footer from './components/Footer';
-import Scene1 from './components/scene-1';
-import Scene2 from './components/scene-2';
+import Scene1 from './scenes/scene-1';
+import Scene2 from './scenes/scene-2';
+import Scene3 from './scenes/scene-3';
+import Scene4 from './scenes/scene-4';
 import Mouse from './components/Mouse';
 import Visualisations from './components/Visualisations';
-import Scene3 from './components/scene-3';
 import Introduction from './components/Introduction';
 
 export default function Home() {
@@ -19,8 +20,9 @@ export default function Home() {
                 <Scene1 />
                 <Scene2 />
                 <Scene3 />
+                <Scene4 />
             </div>
-            <div id="visualisations">
+            <div id="visualisations" className="pt-60">
                 <Visualisations />
             </div>
             <Footer />

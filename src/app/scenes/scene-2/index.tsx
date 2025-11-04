@@ -2,6 +2,8 @@
 import ExportedImage from 'next-image-export-optimizer';
 import cn from '@/lib/cn';
 import { Layer } from '@/lib/layer';
+import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
+import TextBox from '../../components/TextBox';
 
 import styles from './index.module.css';
 
@@ -15,7 +17,8 @@ import road from './images/Final-scene-2-merged_0006_road.png';
 import mailbox from './images/Final-scene-2-merged_0007_mailbox.png';
 import tree from './images/Final-scene-2-merged_0008_tree.png';
 import bg from './images/Final-scene-2-merged_0009_bg.png';
-import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
+
+import ixpProfile from '../../components/Introduction/images/ixp.png';
 
 type Scene2Layer = 'bg' | 'tree' | 'mailbox' | 'road' | 'van' | 'deliveryGuy' | 'arrows' | 'cabinet' | 'grandpa' | 'bush';
 
@@ -71,33 +74,38 @@ export default function Scene2() {
     const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
 
     return (
-        <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
-            <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
-                {touchElement}
-                {LAYERS.map((layer) => (
-                    <div
-                        key={layer.id}
-                        className={cn(
-                            layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
-                            'absolute inset-0',
-                            hoveredTouchArea === layer.id && hoveredStyle,
-                            activeTouchArea === layer.id && activeStyle,
-                        )}
-                        style={{ transformOrigin: layer.transformOrigin }}
-                    >
-                        <ExportedImage
+        <>
+            <TextBox className="mt-60 mb-40" image={ixpProfile} imagePosition="right">
+                <p>Met het pakketje gaat Opa Kees naar het dichtstbijzijnde postkantoor.</p>
+            </TextBox>
+            <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
+                <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
+                    {touchElement}
+                    {LAYERS.map((layer) => (
+                        <div
+                            key={layer.id}
                             className={cn(
-                                styles.layer,
-                                styles[layer.id],
+                                layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                                'absolute inset-0',
+                                hoveredTouchArea === layer.id && hoveredStyle,
+                                activeTouchArea === layer.id && activeStyle,
                             )}
-                            src={layer.image}
-                            alt={layer.id}
-                            fill
-                            style={{ objectFit: 'contain' }}
-                        />
-                    </div>
-                ))}
+                            style={{ transformOrigin: layer.transformOrigin }}
+                        >
+                            <ExportedImage
+                                className={cn(
+                                    styles.layer,
+                                    styles[layer.id],
+                                )}
+                                src={layer.image}
+                                alt={layer.id}
+                                fill
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 }

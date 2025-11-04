@@ -3,6 +3,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import cn from '@/lib/cn';
 import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 import { Layer } from '@/lib/layer';
+import TextBox from '../../components/TextBox';
 
 import styles from './index.module.css';
 
@@ -29,6 +30,8 @@ import island10 from './images/Final-scene-3-merged_0019_Island-10.png';
 import uni from './images/Final-scene-3-merged_0020_uni.png';
 import roads from './images/Final-scene-3-merged_0021_roads.png';
 import bgElements from './images/Final-scene-3-merged_0022_bg.png';
+
+import ixpProfile from '../../components/Introduction/images/ixp.png';
 
 export type Scene3Layer = 'bgElements' | 'roads' | 'uni' | 'lighthouse' | 'island10' | 'island9' | 'island8' | 'island7' | 'island6Email2' | 'island6' | 'ixp' | 'mainIsland' | 'boat' | 'touringBus' | 'trainstationNtp' | 'sidn' | 'warehouses' | 'island5' | 'island4' | 'island3' | 'island2' | 'island1Email1' | 'trucks';
 
@@ -140,33 +143,38 @@ export default function Scene3() {
     const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
 
     return (
-        <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
-            <div className="aspect-[6/5] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
-                {touchElement}
-                {LAYERS.map((layer) => (
-                    <div
-                        key={layer.id}
-                        className={cn(
-                            layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
-                            'absolute inset-0',
-                            hoveredTouchArea === layer.id && hoveredStyle,
-                            activeTouchArea === layer.id && activeStyle,
-                        )}
-                        style={{ transformOrigin: layer.transformOrigin }}
-                    >
-                        <ExportedImage
+        <>
+            <TextBox className="mt-60 mb-40" image={ixpProfile}>
+                <p>Vanuit het postkantoor gaat het pakketje verder het internet op.</p>
+            </TextBox>
+            <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
+                <div className="aspect-[6/5] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
+                    {touchElement}
+                    {LAYERS.map((layer) => (
+                        <div
+                            key={layer.id}
                             className={cn(
-                                styles.layer,
-                                styles[layer.id],
+                                layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                                'absolute inset-0',
+                                hoveredTouchArea === layer.id && hoveredStyle,
+                                activeTouchArea === layer.id && activeStyle,
                             )}
-                            src={layer.image}
-                            alt={layer.id}
-                            fill
-                            style={{ objectFit: 'contain' }}
-                        />
-                    </div>
-                ))}
+                            style={{ transformOrigin: layer.transformOrigin }}
+                        >
+                            <ExportedImage
+                                className={cn(
+                                    styles.layer,
+                                    styles[layer.id],
+                                )}
+                                src={layer.image}
+                                alt={layer.id}
+                                fill
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 }

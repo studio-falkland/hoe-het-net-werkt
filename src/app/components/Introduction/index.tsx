@@ -8,13 +8,12 @@ import ixp from './images/ixp.png';
 import lighthouse from './images/lighthouse.png';
 import tours from './images/tours.png';
 import trainstation from './images/trainstation.png';
+import TextBox from '../TextBox';
 
-export type IntroductionProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
-
-export default function Introduction({ className, ...props }: IntroductionProps) {
+export default function Introduction() {
     return (
         <>
-            <div className={cn('rounded-2xl border-2 bg-white max-w-2xl mx-auto p-8', styles['text-box-shadow'], className)} {...props}>
+            <TextBox className="max-w-2xl mx-auto">
                 <div className="font-medium text-xl text-center">
                     <h1>
                         We gebruiken
@@ -27,7 +26,7 @@ export default function Introduction({ className, ...props }: IntroductionProps)
                         Maar hoe werkt het eigenlijk?
                     </h1>
                 </div>
-            </div>
+            </TextBox>
             <div className="flex items-center justify-center mx-auto gap-8 mt-12 text-center text-lg">
                 <a
                     href="#story"

@@ -6,6 +6,8 @@ import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/
 
 import styles from './index.module.css';
 
+import grandpaProfile from '../../components/Introduction/images/grandpa.png';
+
 import dog from './images/Final-scene-1-merged_0000_dog.png';
 import cat from './images/Final-scene-1-merged_0001_cat.png';
 import props from './images/Final-scene-1-merged_0002_table-props.png';
@@ -20,6 +22,7 @@ import light from './images/Final-scene-1-merged_0010_light.png';
 import bookshelf from './images/Final-scene-1-merged_0011_booksshelf.png';
 import carpet from './images/Final-scene-1-merged_0012_carpet.png';
 import bg from './images/Final-scene-1-merged_0013_background.png';
+import TextBox from '../../components/TextBox';
 
 type Scene1Layer = 'bg' | 'carpet' | 'bookshelf' | 'light' | 'plant' | 'grandpa' | 'table' | 'chairLeft' | 'chairRight' | 'box' | 'hands' | 'props' | 'cat' | 'dog';
 
@@ -88,37 +91,46 @@ export default function Scene1() {
     const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
 
     return (
-        <div className={cn('w-screen pt-[200px] overflow-hidden flex justify-center', styles.root)}>
-            <div className="aspect-[4/3] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
-                {touchElement}
-                {LAYERS.map((layer) => (
-                    <div
-                        key={layer.id}
-                        className={cn(
-                            layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
-                            'absolute inset-0',
-                            hoveredTouchArea === layer.id && hoveredStyle,
-                            activeTouchArea === layer.id && activeStyle,
-                            styles.container,
-                        )}
-                        style={{ transformOrigin: layer.transformOrigin }}
-                    >
-                        <div className={cn(styles.appear, 'absolute inset-0')}>
-                            <ExportedImage
-                                key={layer.id}
-                                className={cn(
-                                    styles.layer,
-                                    styles[layer.id],
-                                )}
-                                src={layer.image}
-                                alt={layer.id}
-                                fill
-                                style={{ objectFit: 'contain' }}
-                            />
+        <>
+            <TextBox className="mt-40" image={grandpaProfile}>
+                <p>
+                    <b>Opa Harry</b>
+                    {' '}
+                    leest in de krant over het favoriete team van zijn kleindochter Noa. Hij wil haar daar graag over vertellen en vragen hoe het met haar gaat.
+                </p>
+            </TextBox>
+            <div className={cn('w-screen pt-[200px] overflow-hidden flex justify-center', styles.root)}>
+                <div className="aspect-[4/3] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
+                    {touchElement}
+                    {LAYERS.map((layer) => (
+                        <div
+                            key={layer.id}
+                            className={cn(
+                                layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                                'absolute inset-0',
+                                hoveredTouchArea === layer.id && hoveredStyle,
+                                activeTouchArea === layer.id && activeStyle,
+                                styles.container,
+                            )}
+                            style={{ transformOrigin: layer.transformOrigin }}
+                        >
+                            <div className={cn(styles.appear, 'absolute inset-0')}>
+                                <ExportedImage
+                                    key={layer.id}
+                                    className={cn(
+                                        styles.layer,
+                                        styles[layer.id],
+                                    )}
+                                    src={layer.image}
+                                    alt={layer.id}
+                                    fill
+                                    style={{ objectFit: 'contain' }}
+                                />
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
