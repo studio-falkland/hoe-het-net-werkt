@@ -4,4 +4,5 @@ export type Layer<T extends string = string> = {
     id: T;
     points?: string;
     image: StaticImageData;
+    transformOrigin?: string;
 };

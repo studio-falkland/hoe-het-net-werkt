@@ -53,11 +53,13 @@ const LAYERS: Layer<Scene2Layer>[] = [
         id: 'cabinet',
         image: cabinet,
         points: '558,1150 560,770 988,555 1068,595 1068,980 650,1193',
+        transformOrigin: '50% 20%',
     },
     {
         id: 'grandpa',
         image: grandpa,
         points: '897,1100 955,1132 1023,1058 1042,1052 983,993 897,1037',
+        transformOrigin: '50% 30%',
     },
     {
         id: 'bush',
@@ -81,6 +83,7 @@ export default function Scene2() {
                             hoveredTouchArea === layer.id && hoveredStyle,
                             activeTouchArea === layer.id && activeStyle,
                         )}
+                        style={{ transformOrigin: layer.transformOrigin }}
                     >
                         <ExportedImage
                             className={cn(

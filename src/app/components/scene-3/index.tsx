@@ -45,11 +45,13 @@ const LAYERS: Layer<Scene3Layer>[] = [
         id: 'uni',
         points: '1521,327 1914,526 2154,407 1990,323 1989,274 1777,169 1586,271 1584,297',
         image: uni,
+        transformOrigin: '60% 20%',
     },
     {
         id: 'lighthouse',
         image: lighthouse,
         points: '1299,2061 1347,2018 1354,1920 1353,1889 1378,1859 1403,1889 1405,1914 1398,1923 1405,2009 1435,2027 1396,2054',
+        transformOrigin: '40% 90%',
     },
     {
         id: 'island10',
@@ -75,6 +77,7 @@ const LAYERS: Layer<Scene3Layer>[] = [
         id: 'ixp',
         image: ixp,
         points: '1340,1441 1644,1287 2063,1501 1760,1654',
+        transformOrigin: '50% 70%',
     },
     {
         id: 'mainIsland',
@@ -149,6 +152,7 @@ export default function Scene3() {
                             hoveredTouchArea === layer.id && hoveredStyle,
                             activeTouchArea === layer.id && activeStyle,
                         )}
+                        style={{ transformOrigin: layer.transformOrigin }}
                     >
                         <ExportedImage
                             className={cn(

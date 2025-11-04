@@ -101,6 +101,7 @@ export default function Scene1() {
                             activeTouchArea === layer.id && activeStyle,
                             styles.container,
                         )}
+                        style={{ transformOrigin: layer.transformOrigin }}
                     >
                         <div className={cn(styles.appear, 'absolute inset-0')}>
                             <ExportedImage

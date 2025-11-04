@@ -71,7 +71,7 @@
 .bush {
     animation-name: appearAndFade;
     animation-timeline: --scene-2-scroll;
-    animation-range: cover 50% cover 60%;
+    animation-range: cover 20% cover 30%;
 }
 
 :root {

@@ -113,6 +113,13 @@
     animation-range: cover 25% cover 50%;
 }
 
+.island6 {
+    /* Final-scene-3-merged_0007_Island-5.png */
+    animation-name: appearAndFade;
+    animation-timeline: --scene-3-scroll;
+    animation-range: cover 30% cover 55%;
+}
+
 .island5 {
     /* Final-scene-3-merged_0008_Island-5.png */
     animation-name: appearAndFade;
