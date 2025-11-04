@@ -2,16 +2,16 @@ import Colofon from './components/Colofon';
 import Footer from './components/Footer';
 import Scene1 from './components/scene-1';
 import Scene2 from './components/scene-2';
-import TextBox from './components/TextBox';
 import Mouse from './components/Mouse';
 import Visualisations from './components/Visualisations';
 import Scene3 from './components/scene-3';
+import Introduction from './components/Introduction';
 
 export default function Home() {
     return (
         <div className="pt-48">
             <div>
-                <TextBox />
+                <Introduction />
                 <Colofon />
                 <Mouse />
             </div>
