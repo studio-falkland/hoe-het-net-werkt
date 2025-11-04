@@ -13,6 +13,7 @@ export default function PreviewBanner() {
     useEffect(() => {
         const value = window?.localStorage.getItem(LOCAL_STORAGE_KEY) ?? 'true';
         if (value === 'true') {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsDismissed(true);
         }
     }, []);

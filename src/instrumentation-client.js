@@ -8,14 +8,14 @@ async function registerScrollTimelinePolyfill() {
             // Collect all animations from all layers
             Array.from(document.querySelectorAll('.layer'))
                 // Get all animations from the layer
-                .flatMap(element => element.getAnimations())
+                .flatMap((element) => element.getAnimations())
                 // Play the animation
-                .forEach(animation => {
+                .forEach((animation) => {
                     // GUARD: If the animation is not playing, play it
                     if (animation.playState === 'finished' || animation.playState === 'idle') {
                         animation.cancel();
                     }
-                    
+
                     animation.play();
                 });
         });

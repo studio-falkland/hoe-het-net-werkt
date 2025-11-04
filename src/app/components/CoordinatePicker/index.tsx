@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useCallback, useMemo } from 'react';
+import { useState, useRef, useCallback, useMemo, useLayoutEffect } from 'react';
 import { StaticImageData } from 'next/image';
 
 interface Coordinate {
@@ -17,12 +17,29 @@ function CoordinatePicker({ image }: { image: StaticImageData }) {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [coordinates, setCoordinates] = useState<Coordinate[]>([]);
     const [showCoordinates, setShowCoordinates] = useState(true);
+    const [containerRect, setContainerRect] = useState<{ width: number; height: number } | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const idCounter = useRef(0);
 
     const imageDimensions = useMemo(() => {
         return { width: image.width, height: image.height };
     }, [image]);
+
+    // Update container dimensions
+    useLayoutEffect(() => {
+        if (!isActive || !containerRef.current) return;
+
+        const updateRect = () => {
+            if (containerRef.current) {
+                const rect = containerRef.current.getBoundingClientRect();
+                setContainerRect({ width: rect.width, height: rect.height });
+            }
+        };
+
+        updateRect();
+        window.addEventListener('resize', updateRect);
+        return () => window.removeEventListener('resize', updateRect);
+    }, [isActive]);
 
     const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
         if (!isActive || !containerRef.current || !imageDimensions.width) return;
@@ -198,13 +215,12 @@ function CoordinatePicker({ image }: { image: StaticImageData }) {
                 }}
             >
                 {/* Polyline preview */}
-                {coordinates.length > 1 && containerRef.current && imageDimensions.width && (
+                {coordinates.length > 1 && containerRect && imageDimensions.width && (
                     <svg className="absolute inset-0 w-full h-full pointer-events-none">
                         <polyline
                             points={coordinates.map((coord) => {
-                                const rect = containerRef.current!.getBoundingClientRect();
-                                const displayX = (coord.x / imageDimensions.width) * rect.width;
-                                const displayY = (coord.y / imageDimensions.height) * rect.height;
+                                const displayX = (coord.x / imageDimensions.width) * containerRect.width;
+                                const displayY = (coord.y / imageDimensions.height) * containerRect.height;
                                 return `${displayX},${displayY}`;
                             }).join(' ')}
                             fill="none"
@@ -217,12 +233,12 @@ function CoordinatePicker({ image }: { image: StaticImageData }) {
                 )}
 
                 {/* Crosshairs */}
-                {containerRef.current && imageDimensions.width && (
+                {containerRect && imageDimensions.width && (
                     <div
                         className="absolute pointer-events-none"
                         style={{
-                            left: `${(mousePos.x / imageDimensions.width) * containerRef.current.getBoundingClientRect().width}px`,
-                            top: `${(mousePos.y / imageDimensions.height) * containerRef.current.getBoundingClientRect().height}px`,
+                            left: `${(mousePos.x / imageDimensions.width) * containerRect.width}px`,
+                            top: `${(mousePos.y / imageDimensions.height) * containerRect.height}px`,
                             transform: 'translate(-50%, -50%)',
                         }}
                     >
@@ -232,10 +248,9 @@ function CoordinatePicker({ image }: { image: StaticImageData }) {
                 )}
 
                 {/* Coordinate dots */}
-                {showCoordinates && containerRef.current && imageDimensions.width && coordinates.map((coord) => {
-                    const rect = containerRef.current!.getBoundingClientRect();
-                    const displayX = (coord.x / imageDimensions.width) * rect.width;
-                    const displayY = (coord.y / imageDimensions.height) * rect.height;
+                {showCoordinates && containerRect && imageDimensions.width && coordinates.map((coord) => {
+                    const displayX = (coord.x / imageDimensions.width) * containerRect.width;
+                    const displayY = (coord.y / imageDimensions.height) * containerRect.height;
                     return (
                         <div
                             key={coord.id}
