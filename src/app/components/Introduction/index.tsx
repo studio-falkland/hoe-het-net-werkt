@@ -12,8 +12,8 @@ import TextBox from '../TextBox';
 
 export default function Introduction() {
     return (
-        <>
-            <TextBox className="max-w-2xl mx-auto">
+        <div className="px-4">
+            <TextBox>
                 <div className="font-medium text-xl text-center">
                     <h1>
                         We gebruiken
@@ -84,6 +84,6 @@ export default function Introduction() {
                     </div>
                 </a>
             </div>
-        </>
+        </div>
     );
 }
