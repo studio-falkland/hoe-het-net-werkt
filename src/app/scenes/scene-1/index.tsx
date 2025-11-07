@@ -6,7 +6,7 @@ import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/
 
 import styles from './index.module.css';
 
-import grandpaProfile from '../../components/Introduction/images/grandpa.png';
+import grandpaProfile from '@/assets/profiles/grandpa.png';
 
 import dog from './images/Final-scene-1-merged_0000_dog.png';
 import cat from './images/Final-scene-1-merged_0001_cat.png';
@@ -68,7 +68,19 @@ const LAYERS: Layer<Scene1Layer>[] = [
         image: box,
         points: '1458,1093 1694,984 1696,849 1563,784 1323,893 1325,1029',
         visualisationTags: ['tcp'],
-        tooltip: <p>TCP</p>,
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Opa Harry maakt een pakketje voor Zoey. Om te zorgen dat het goed aankomt, plakt hij een aantal etiketten op het pakketje.
+                </p>
+                <p>
+                    Het
+                    {' '}
+                    <b>TCP</b>
+                    -protocol is ervoor gemaakt om te zorgen dat het pakketje goed aankomt.
+                </p>
+            </>
+        ),
     },
     {
         id: 'hands',
@@ -79,7 +91,19 @@ const LAYERS: Layer<Scene1Layer>[] = [
         image: props,
         points: '1261,1301 1387,1093 1255,1074 1184,1108 1137,1170 1088,1253',
         visualisationTags: ['dns'],
-        tooltip: <p>DNS</p>,
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Opa Harry zoekt in het adressenboek Zoey&apos;s adres op. Dit IP-adres schrijft hij op de buitenkant van het pakketje.
+                </p>
+                <p>
+                    Het systeem dat namen omzet in nummers heet
+                    {' '}
+                    <b>DNS</b>
+                    .
+                </p>
+            </>
+        ),
     },
     {
         id: 'cat',

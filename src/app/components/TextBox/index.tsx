@@ -32,7 +32,7 @@ export function InnerTextBox({
         >
             {image && (
                 <div className="relative w-64">
-                    <ExportedImage src={image} alt="TextBox" className="w-64 h-[220px] absolute bottom-0 left-0 right-0 object-cover rounded-bl-xl" />
+                    <ExportedImage src={image} alt="TextBox" className="w-[220px] h-[220px] absolute bottom-0 left-0 right-0 object-contain object-bottom rounded-bl-xl" />
                 </div>
             )}
             <div className="p-8 w-full">

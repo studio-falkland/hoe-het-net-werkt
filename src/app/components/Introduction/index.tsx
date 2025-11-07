@@ -1,14 +1,11 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styles from './index.module.css';
-import cn from '@/lib/cn';
 import ExportedImage from 'next-image-export-optimizer';
 
-import grandpa from './images/grandpa.png';
-import ixp from './images/ixp.png';
-import lighthouse from './images/lighthouse.png';
-import tours from './images/tours.png';
-import trainstation from './images/trainstation.png';
-import TextBox from '../TextBox';
+import grandpa from '@/assets/profiles/grandpa.png';
+import ixp from '@/assets/profiles/ixp.png';
+import lighthouse from '@/assets/profiles/lighthouse.png';
+import tours from '@/assets/profiles/tours.png';
+import trainstation from '@/assets/profiles/trainstation.png';
+import TextBox from '@/app/components/TextBox';
 
 export default function Introduction() {
     return (

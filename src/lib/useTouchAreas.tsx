@@ -139,12 +139,12 @@ export default function useTouchAreas<T extends string = string>({
                     tipRadius={2}
                     style={{ transform: 'translateY(-2px)' }}
                 />
-                <InnerTextBox>
+                <InnerTextBox className="!text-lg">
                     {activeLayer.tooltip}
                 </InnerTextBox>
             </div>
         );
-    }, [activeLayer, floatingStyles, refs, context]);
+    }, [activeLayer, floatingStyles, refs, context, placement]);
 
     return {
         hoveredTouchArea,

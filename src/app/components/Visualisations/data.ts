@@ -5,7 +5,7 @@ import bgpTravelGuide from './images/bgp-travel-guide.webp';
 import zijnWeAlAutonoom from './images/zijn-we-al-autonoom.webp';
 import nlStats from './images/nl-stats.png';
 
-export type VisualisationTag = 'bgp' | 'dns' | 'routing' | (string & {});
+export type VisualisationTag = 'bgp' | 'dns' | 'routing' | 'tcp' | (string & {});
 
 export interface Visualisation {
     /** The title of the visualisation */

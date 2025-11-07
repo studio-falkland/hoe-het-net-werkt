@@ -1,3 +1,4 @@
+import { VisualisationTag } from '@/app/components/Visualisations/data';
 import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
 
@@ -11,6 +12,6 @@ export type Layer<T extends string = string> = {
     text: string;
     points: string;
     tooltip: ReactElement;
-    visualisationTags: string[];
+    visualisationTags: VisualisationTag[];
     transformOrigin?: string;
 };
