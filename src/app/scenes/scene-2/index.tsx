@@ -54,16 +54,21 @@ const LAYERS: Layer<Scene2Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">Het pakketje wordt door het postbedrijf verder getransporteerd. Door heldere bewegwijzering weten ze precies hoe het pakketje op de bestemming kan aankomen.</p>
-                <p>
+                <p className="mb-3">
                     Met het
                     {' '}
                     <b>BGP</b>
                     {' '}
                     protocol communiceren netwerken over hoe ze verbonden zijn met elkaar.
                 </p>
+                <p>
+                    <b>Packet Panic</b>
+                    {' '}
+                    laat zien hoe BGP werkt en wat daarbij fout kan gaan.
+                </p>
             </>
         ),
-        visualisationTags: ['bgp'],
+        visualisationTags: ['bgp', 'packet-panic'],
     },
     {
         id: 'cabinet',

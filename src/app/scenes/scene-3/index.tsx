@@ -49,12 +49,33 @@ const LAYERS: Layer<Scene3Layer>[] = [
         points: '1521,327 1914,526 2154,407 1990,323 1989,274 1777,169 1586,271 1584,297',
         image: uni,
         transformOrigin: '60% 20%',
+        visualisationTags: ['organisations'],
+        tooltip: (
+            <>
+                <p>
+                    Het internet is ontstaan op universiteiten. Nog steeds wordt er door veel onderzoekers gewerkt aan het verbeteren van het internet.
+                </p>
+            </>
+        ),
     },
     {
         id: 'lighthouse',
         image: lighthouse,
         points: '1299,2061 1347,2018 1354,1920 1353,1889 1378,1859 1403,1889 1405,1914 1398,1923 1405,2009 1435,2027 1396,2054',
+        visualisationTags: ['infrastructure', 'zijn-we-al-autonoom'],
         transformOrigin: '40% 90%',
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Tegenwoordig kunnen we niet zonder internet.
+                </p>
+                <p>
+                    <b>Zijn we al autonoom?</b>
+                    {' '}
+                    meet of er bepaalde partijen zijn waar we misschien te afhankelijk van zijn.
+                </p>
+            </>
+        ),
     },
     {
         id: 'island10',
@@ -81,6 +102,20 @@ const LAYERS: Layer<Scene3Layer>[] = [
         image: ixp,
         points: '1340,1441 1644,1287 2063,1501 1760,1654',
         transformOrigin: '50% 70%',
+        visualisationTags: ['infrastructure', 'organisations', 'tcp'],
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Het internet bestaat uit meer dan 100.000 netwerken die met elkaar communiceren. Om dat makkelijk te maken komen ze op grote knooppunten samen.
+                </p>
+                <p>
+                    Zulke knooppunten heten
+                    {' '}
+                    <b>IXP</b>
+                    &apos;s. De Amsterdam Internet Exchange is een van de grootste ter wereld.
+                </p>
+            </>
+        ),
     },
     {
         id: 'mainIsland',
@@ -94,16 +129,62 @@ const LAYERS: Layer<Scene3Layer>[] = [
         id: 'touringBus',
         image: touringBus,
         points: '1713,994 1733,1006 1816,964 1811,930 1793,916 1719,960',
+        visualisationTags: ['infrastructure', 'digitale-kathedralen'],
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Om het internet te verbinden hebben we veel wegen, kabels, servers en datacentra nodig.
+                </p>
+                <p>
+                    <b>Digitale Kathedralen</b>
+                    {' '}
+                    laat zien hoe al die digitale infrastructuur sporen in ons landschap achterlaat.
+                </p>
+            </>
+        ),
     },
     {
         id: 'trainstationNtp',
         image: trainstationNtp,
         points: '923,909 966,887 989,903 1074,856 1047,841 1047,803 1010,773 960,791 926,763 893,783 891,804 851,826 846,869',
+        visualisationTags: ['protocols', 'ntp'],
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Om te zorgen dat de pakketjes goed overhandigd kunnen worden, moeten alle partijen dezelfde tijd gebruiken.
+                </p>
+                <p>
+                    Het
+                    {' '}
+                    <b>NTP</b>
+                    {' '}
+                    protocol is ervoor gemaakt om de tijd op alle apparaten gelijk te houden.
+                </p>
+            </>
+        ),
     },
     {
         id: 'sidn',
         image: sidn,
         points: '1540,860 1646,916 1727,874 1724,816 1656,773 1631,714 1590,699 1540,719',
+        visualisationTags: ['organisations', 'dns'],
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Om sommige protocollen te laten werken hebben we onafhankelijke organisaties nodig.
+                </p>
+                <p>
+                    Zo is het
+                    {' '}
+                    <b>SIDN</b>
+                    {' '}
+                    verantwoordelijk voor alle website die eindigen op
+                    {' '}
+                    <b>.nl</b>
+                    .
+                </p>
+            </>
+        ),
     },
     {
         id: 'warehouses',
