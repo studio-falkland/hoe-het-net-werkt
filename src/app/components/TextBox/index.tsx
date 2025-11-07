@@ -17,7 +17,6 @@ export function InnerTextBox({
     return (
         <div
             className={cn(
-                className,
                 'rounded-2xl text-lg md:text-xl border-2 bg-white container lg:max-w-2xl flex font-medium',
                 styles['text-box-shadow'],
                 image
@@ -27,6 +26,7 @@ export function InnerTextBox({
                         )
                     : 'text-center',
                 imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row',
+                className,
             )}
             {...props}
         >

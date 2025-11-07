@@ -139,7 +139,7 @@ export default function useTouchAreas<T extends string = string>({
                     tipRadius={2}
                     style={{ transform: 'translateY(-2px)' }}
                 />
-                <InnerTextBox className="!text-lg">
+                <InnerTextBox className="text-sm md:text-lg">
                     {activeLayer.tooltip}
                 </InnerTextBox>
             </div>

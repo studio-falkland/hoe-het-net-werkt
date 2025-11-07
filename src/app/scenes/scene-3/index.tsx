@@ -147,7 +147,7 @@ export default function Scene3() {
     return (
         <>
             <TextBox className="mt-60 mb-40" image={ixpProfile}>
-                <p>Vanuit het postkantoor gaat het pakketje verder het internet op.</p>
+                <p>Het pakketje gaat van hand tot hand om aan te komen bij Zoey. Daar zijn veel verschillende partijen bij betrokken.</p>
             </TextBox>
             <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
                 <div className="aspect-[6/5] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">

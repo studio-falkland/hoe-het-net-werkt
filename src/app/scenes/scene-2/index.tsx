@@ -51,18 +51,54 @@ const LAYERS: Layer<Scene2Layer>[] = [
         id: 'arrows',
         image: arrows,
         points: '1258,1672 1260,1505 1207,1507 1193,1450 1265,1435 1263,1368 1182,1343 1188,1275 1262,1293 1267,1263 1290,1263 1290,1297 1363,1327 1380,1365 1353,1395 1293,1378 1288,1437 1383,1430 1422,1455 1392,1495 1292,1503 1285,1675',
+        tooltip: (
+            <>
+                <p className="mb-3">Het pakketje wordt door het postbedrijf verder getransporteerd. Door heldere bewegwijzering weten ze precies hoe het pakketje op de bestemming kan aankomen.</p>
+                <p>
+                    Met het
+                    {' '}
+                    <b>BGP</b>
+                    {' '}
+                    protocol communiceren netwerken over hoe ze verbonden zijn met elkaar.
+                </p>
+            </>
+        ),
+        visualisationTags: ['bgp'],
     },
     {
         id: 'cabinet',
         image: cabinet,
         points: '558,1150 560,770 988,555 1068,595 1068,980 650,1193',
         transformOrigin: '50% 20%',
+        visualisationTags: ['smtp', 'imap', 'pop3'],
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Opa Harry geeft het pakketje af bij het pakketpunt. Daar wordt het pakketje opgeslagen en verder verzonden.
+                </p>
+                <p>
+                    Het
+                    {' '}
+                    <b>SMTP</b>
+                    {' '}
+                    protocol is ervoor gemaakt om e-mails te verzenden.
+                </p>
+            </>
+        ),
     },
     {
         id: 'grandpa',
         image: grandpa,
         points: '897,1100 955,1132 1023,1058 1042,1052 983,993 897,1037',
         transformOrigin: '50% 30%',
+        visualisationTags: ['tcp'],
+        tooltip: (
+            <>
+                <p className="mb-3">
+                    Opa brengt het pakketje van zijn eigen netwerk naar zijn eigen internetprovider. Vanaf daar pakt de provider het versturen van het pakketje op.
+                </p>
+            </>
+        ),
     },
     {
         id: 'bush',
