@@ -16,7 +16,7 @@ export function useActiveSection() {
                     }
                 });
             },
-            { threshold: 0.3 },
+            { threshold: 0.1 },
         );
 
         // Get the story and visualisations sections
