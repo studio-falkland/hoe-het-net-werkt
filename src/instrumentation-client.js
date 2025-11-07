@@ -1,5 +1,7 @@
 async function registerScrollTimelinePolyfill() {
     if (!CSS.supports('animation-timeline: auto')) {
+        console.log('Animation timeline not supported, loading scroll-timeline-polyfill...');
+
         // Load the scroll-timeline-polyfill
         await import('scroll-timeline-polyfill/src/index.js');
 
