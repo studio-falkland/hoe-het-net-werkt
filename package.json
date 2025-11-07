@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@web-atoms/scroll-timeline": "^1.0.5",
+    "@floating-ui/react": "^0.27.16",
     "next": "16.0.1",
     "next-image-export-optimizer": "^1.19.0",
     "react": "19.2.0",

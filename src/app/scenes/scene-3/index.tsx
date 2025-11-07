@@ -140,7 +140,9 @@ const LAYERS: Layer<Scene3Layer>[] = [
 ];
 
 export default function Scene3() {
-    const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
+    const {
+        hoveredTouchArea, activeTouchArea, touchElement, tooltipElement,
+    } = useTouchAreas({ layers: LAYERS });
 
     return (
         <>
@@ -150,11 +152,12 @@ export default function Scene3() {
             <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
                 <div className="aspect-[6/5] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">
                     {touchElement}
+                    {tooltipElement}
                     {LAYERS.map((layer) => (
                         <div
                             key={layer.id}
                             className={cn(
-                                layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                                'points' in layer && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
                                 'absolute inset-0',
                                 hoveredTouchArea === layer.id && hoveredStyle,
                                 activeTouchArea === layer.id && activeStyle,

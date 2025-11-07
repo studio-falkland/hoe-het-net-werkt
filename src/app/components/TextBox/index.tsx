@@ -9,35 +9,45 @@ export type TextBoxProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTM
     imagePosition?: 'left' | 'right';
 };
 
-export default function TextBox({
+export const textBoxStyle = styles['text-box-shadow'];
+
+export function InnerTextBox({
     className, image, children, imagePosition = 'left', ...props
 }: TextBoxProps) {
     return (
-        <div className="flex justify-center w-full px-4">
-            <div
-                className={cn(
-                    className,
-                    'rounded-2xl text-lg md:text-xl border-2 bg-white container lg:max-w-2xl m-2 flex font-medium',
-                    styles['text-box-shadow'],
-                    image
-                        ? (imagePosition === 'left'
-                                ? 'text-left'
-                                : 'text-right'
-                            )
-                        : 'text-center',
-                    imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row',
-                )}
-                {...props}
-            >
-                {image && (
-                    <div className="relative w-64">
-                        <ExportedImage src={image} alt="TextBox" className="w-64 h-[220px] absolute bottom-0 left-0 right-0 object-cover rounded-bl-xl" />
-                    </div>
-                )}
-                <div className="p-8 w-full">
-                    {children}
+        <div
+            className={cn(
+                className,
+                'rounded-2xl text-lg md:text-xl border-2 bg-white container lg:max-w-2xl flex font-medium',
+                styles['text-box-shadow'],
+                image
+                    ? (imagePosition === 'left'
+                            ? 'text-left'
+                            : 'text-right'
+                        )
+                    : 'text-center',
+                imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row',
+            )}
+            {...props}
+        >
+            {image && (
+                <div className="relative w-64">
+                    <ExportedImage src={image} alt="TextBox" className="w-64 h-[220px] absolute bottom-0 left-0 right-0 object-cover rounded-bl-xl" />
                 </div>
+            )}
+            <div className="p-8 w-full">
+                {children}
             </div>
+        </div>
+    );
+}
+
+export default function TextBox({
+    className, ...props
+}: TextBoxProps) {
+    return (
+        <div className="flex justify-center w-full px-4">
+            <InnerTextBox className={cn(className, 'm-2')} {...props} />
         </div>
     );
 }

@@ -67,6 +67,8 @@ const LAYERS: Layer<Scene1Layer>[] = [
         id: 'box',
         image: box,
         points: '1458,1093 1694,984 1696,849 1563,784 1323,893 1325,1029',
+        visualisationTags: ['tcp'],
+        tooltip: <p>TCP</p>,
     },
     {
         id: 'hands',
@@ -76,6 +78,8 @@ const LAYERS: Layer<Scene1Layer>[] = [
         id: 'props',
         image: props,
         points: '1261,1301 1387,1093 1255,1074 1184,1108 1137,1170 1088,1253',
+        visualisationTags: ['dns'],
+        tooltip: <p>DNS</p>,
     },
     {
         id: 'cat',
@@ -88,7 +92,9 @@ const LAYERS: Layer<Scene1Layer>[] = [
 ];
 
 export default function Scene1() {
-    const { hoveredTouchArea, activeTouchArea, touchElement } = useTouchAreas({ layers: LAYERS });
+    const {
+        hoveredTouchArea, activeTouchArea, touchElement, tooltipElement,
+    } = useTouchAreas({ layers: LAYERS });
 
     return (
         <>
@@ -102,11 +108,12 @@ export default function Scene1() {
             <div className={cn('w-screen pt-[200px] overflow-hidden flex justify-center', styles.root)}>
                 <div className="aspect-[4/3] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">
                     {touchElement}
+                    {tooltipElement}
                     {LAYERS.map((layer) => (
                         <div
                             key={layer.id}
                             className={cn(
-                                layer.points && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
+                                'points' in layer && layer.id !== hoveredTouchArea && layer.id !== activeTouchArea && touchAreaStyle,
                                 'absolute inset-0',
                                 hoveredTouchArea === layer.id && hoveredStyle,
                                 activeTouchArea === layer.id && activeStyle,
