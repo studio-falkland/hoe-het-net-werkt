@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { IBM_Plex_Serif, Inter } from 'next/font/google';
 import './globals.css';
 import Menu from './components/Menu';
@@ -19,6 +19,12 @@ const ibmPlexSerif = IBM_Plex_Serif({
 export const metadata: Metadata = {
     title: 'Hoe het Net Werkt',
     description: 'Een visualisatie over het internet',
+};
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    viewportFit: 'cover',
 };
 
 export default function RootLayout({

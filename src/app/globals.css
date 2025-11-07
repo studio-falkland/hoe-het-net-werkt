@@ -16,5 +16,12 @@ html {
 @media screen and (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
-	}
+	} 
+}
+
+.layer {
+	will-change: transform, opacity;
+	contain: layout style paint;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
 }
