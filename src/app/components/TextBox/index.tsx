@@ -13,11 +13,11 @@ export default function TextBox({
     className, image, children, imagePosition = 'left', ...props
 }: TextBoxProps) {
     return (
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center w-full px-4">
             <div
                 className={cn(
                     className,
-                    'rounded-2xl text-lg md:text-xl border-2 bg-white max-w-2xl m-2 flex font-medium',
+                    'rounded-2xl text-lg md:text-xl border-2 bg-white container lg:max-w-2xl m-2 flex font-medium',
                     styles['text-box-shadow'],
                     image
                         ? (imagePosition === 'left'
@@ -30,11 +30,11 @@ export default function TextBox({
                 {...props}
             >
                 {image && (
-                    <div className="relative w-128">
+                    <div className="relative w-64">
                         <ExportedImage src={image} alt="TextBox" className="w-64 h-[220px] absolute bottom-0 left-0 right-0 object-cover rounded-bl-xl" />
                     </div>
                 )}
-                <div className="p-8">
+                <div className="p-8 w-full">
                     {children}
                 </div>
             </div>
