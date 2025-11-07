@@ -47,8 +47,6 @@ export default function useTouchAreas<T extends string = string>({
         ],
     });
 
-    console.log({ placement });
-
     // Filter out layers that don't have points
     const touchLayers = useMemo(() => {
         return layers.filter((layer) => 'points' in layer);
