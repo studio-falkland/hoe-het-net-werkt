@@ -101,6 +101,8 @@ export default function Scene2() {
                                 alt={layer.id}
                                 fill
                                 style={{ objectFit: 'contain' }}
+                                loading="eager"
+                                fetchPriority="high"
                             />
                         </div>
                     ))}

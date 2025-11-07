@@ -96,7 +96,7 @@ export default function Scene1() {
                 <p>
                     <b>Opa Harry</b>
                     {' '}
-                    leest in de krant over het favoriete team van zijn kleindochter Noa. Hij wil haar daar graag over vertellen en vragen hoe het met haar gaat.
+                    leest in de krant over het favoriete team van zijn kleindochter Zoey. Hij wil haar daar graag over vertellen en vragen hoe het met haar gaat.
                 </p>
             </TextBox>
             <div className={cn('w-screen pt-[200px] overflow-hidden flex justify-center', styles.root)}>
@@ -125,6 +125,8 @@ export default function Scene1() {
                                     alt={layer.id}
                                     fill
                                     style={{ objectFit: 'contain' }}
+                                    loading="eager"
+                                    fetchPriority="high"
                                 />
                             </div>
                         </div>
