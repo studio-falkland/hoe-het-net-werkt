@@ -1,4 +1,4 @@
-name: Build and Deploy to Scaleway
+name: Build and Deploy via FTP
 
 on:
   push:
@@ -68,29 +68,11 @@ jobs:
           name: build-output
           path: out/
 
-      - name: Configure AWS CLI
-        run: |
-          aws configure set aws_access_key_id ${{ secrets.SCALEWAY_ACCESS_KEY }}
-          aws configure set aws_secret_access_key ${{ secrets.SCALEWAY_SECRET_KEY }}
-          aws configure set region ${{ secrets.SCALEWAY_REGION }}
-          aws configure set output json
-          aws configure set services scw-${{ secrets.SCALEWAY_REGION }}
-          
-          cat >> ~/.aws/config << EOF
-          [services scw-${{ secrets.SCALEWAY_REGION }}]
-          s3 =
-            endpoint_url = https://s3.${{ secrets.SCALEWAY_REGION }}.scw.cloud
-            max_concurrent_requests = 100
-            max_queue_size = 1000
-            multipart_threshold = 50MB
-            multipart_chunksize = 10MB
-          s3api =
-            endpoint_url = https://s3.${{ secrets.SCALEWAY_REGION }}.scw.cloud
-          EOF
-
-      - name: Sync to Scaleway Object Storage
-        run: |
-          aws s3 sync out/ s3://${{ secrets.SCALEWAY_BUCKET_NAME }}/ \
-            --delete \
-            --acl public-read
-
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ./
