@@ -45,8 +45,8 @@ export const visualisations: Visualisation[] = [
         ],
     },
     {
-        title: 'BGP Travel Guide',
-        description: 'De BGP Travel Guide is een reisgids voor alle lokaties waar BGP routing plaatsvindt.',
+        title: 'Digitale Kathedralen',
+        description: 'Digitale Kathedralen is een reisgids voor alle lokaties waar BGP routing plaatsvindt.',
         image: bgpTravelGuide,
         url: '#',
         internetInfrastructuurInBeeld: true,
