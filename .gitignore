@@ -42,3 +42,5 @@ next-env.d.ts
 
 # lingui compiled catalogs
 src/locales/**/messages.ts
+
+.github/workflows/rclone-configs/
