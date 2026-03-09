@@ -3,6 +3,10 @@ import { IBM_Plex_Serif, Inter } from 'next/font/google';
 import './globals.css';
 import Menu from './components/Menu';
 import PreviewBanner from './components/PreviewBanner';
+import { i18n, getLocale } from '@/i18n';
+import { t } from '@lingui/core/macro';
+import { setI18n } from '@lingui/react/server';
+import LinguiProvider from './components/LinguiProvider';
 
 const inter = Inter({
     variable: '--font-inter',
@@ -16,10 +20,12 @@ const ibmPlexSerif = IBM_Plex_Serif({
     style: ['italic'],
 });
 
-export const metadata: Metadata = {
-    title: 'Hoe het Net Werkt',
-    description: 'Een visualisatie over het internet',
-};
+export function generateMetadata(): Metadata {
+    return {
+        title: t(i18n)`Hoe het Net Werkt`,
+        description: t(i18n)`Een visualisatie over het internet`,
+    };
+}
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -32,12 +38,17 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const locale = getLocale();
+    setI18n(i18n);
+
     return (
-        <html lang="en" className={`${inter.variable} ${ibmPlexSerif.variable}`}>
+        <html lang={locale} className={`${inter.variable} ${ibmPlexSerif.variable}`}>
             <body className="antialiased">
-                <PreviewBanner />
-                <Menu />
-                {children}
+                <LinguiProvider>
+                    <PreviewBanner />
+                    <Menu />
+                    {children}
+                </LinguiProvider>
             </body>
         </html>
     );

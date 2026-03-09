@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-03-09 10:29+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/app/components/Introduction/index.tsx:43
+msgid "… en leer over de protocollen, organisaties en infrastructuur die het internet mogelijk maken."
+msgstr "… and learn about the protocols, organisations and infrastructure that make the internet."
+
+#: src/app/components/Visualisations/data.tsx:80
+msgid ".nl Stats verzamelt statistieken over het .nl domein."
+msgstr ".nl Stats collects statistics about the .nl domain."
+
+#: src/app/scenes/scene-3/index.tsx:150
+msgid "<0>Digitale Kathedralen</0> laat zien hoe al die digitale infrastructuur sporen in ons landschap achterlaat."
+msgstr "<0>Digitale Kathedralen</0> shows how all that digital infrastructure leaves its traces in our living environment."
+
+#: src/app/scenes/scene-1/index.tsx:136
+msgid "<0>Opa Harry</0> leest in de krant over het favoriete team van zijn kleindochter Zoey. Hij wil haar daar graag over vertellen en vragen hoe het met haar gaat."
+msgstr "<0>Grandpa Harry</0> reads in the newspaper about his granddaughter Zoey's favourite team. He would love to tell her about it and ask how she's doing."
+
+#: src/app/scenes/scene-2/index.tsx:72
+msgid "<0>Packet Panic</0> laat zien hoe BGP werkt en wat daarbij fout kan gaan."
+msgstr "<0>Packet Panic</0> shows how BGP works and what can go wrong."
+
+#: src/app/scenes/scene-3/index.tsx:76
+msgid "<0>Zijn we al autonoom?</0> meet of er bepaalde partijen zijn waar we misschien te afhankelijk van zijn."
+msgstr "<0>Are we autonomous yet?</0> measures whether there are certain parties we may be too dependent on."
+
+#: src/app/components/Introduction/index.tsx:82
+msgid "Bekijk de visualisaties"
+msgstr "View the visualisations"
+
+#. placeholder {0}: visualisation.title
+#: src/app/components/Visualisations/Visualisation.tsx:60
+msgid "Bezoek <0>{0}</0>"
+msgstr "Visit <0>{0}</0>"
+
+#: src/app/components/Colofon/index.tsx:7
+msgid "De call"
+msgstr "The call"
+
+#: src/app/components/Colofon/index.tsx:19
+msgid "De experts"
+msgstr "The experts"
+
+#: src/app/components/Footer/index.tsx:58
+msgid "Deelnemers Internet Infrastructuur in Beeld"
+msgstr "Participants Internet Infrastructuur in Beeld"
+
+#: src/app/components/Visualisations/index.tsx:19
+msgid "Deze visualisaties helpen je beter te begrijpen hoe bepaalde aspecten van het internet in elkaar steken."
+msgstr "These visualisations help you better understand how certain aspects of the internet work."
+
+#: src/app/components/Visualisations/data.tsx:50
+msgid "Digitale Kathedralen is een reisgids voor alle lokaties waar BGP routing plaatsvindt."
+msgstr "Digitale Kathedralen is a travel guide for all locations where BGP routing takes place."
+
+#: src/app/components/Introduction/index.tsx:83
+msgid "Een database met rijke visualisaties van en over het internet."
+msgstr "A database of rich visualisations of and about the internet."
+
+#: src/app/layout.tsx:26
+msgid "Een visualisatie over het internet"
+msgstr "A visualisation about the internet"
+
+#: src/app/components/Footer/index.tsx:38
+msgid "Gefinancierd door"
+msgstr "Funded by"
+
+#: src/app/components/Visualisations/Visualisation.tsx:39
+msgid "Gemaakt door"
+msgstr "Made by"
+
+#: src/app/scenes/scene-3/index.tsx:172
+msgid "Het <0>NTP</0> protocol is ervoor gemaakt om de tijd op alle apparaten gelijk te houden."
+msgstr "The <0>NTP</0> protocol was designed to keep the time in sync across all devices."
+
+#: src/app/scenes/scene-2/index.tsx:96
+msgid "Het <0>SMTP</0> protocol is ervoor gemaakt om e-mails te verzenden."
+msgstr "The <0>SMTP</0> protocol was designed to send emails."
+
+#: src/app/scenes/scene-1/index.tsx:80
+msgid "Het <0>TCP</0>-protocol is ervoor gemaakt om te zorgen dat het pakketje goed aankomt."
+msgstr "The <0>TCP</0> protocol was designed to ensure the packet arrives correctly."
+
+#: src/app/components/Colofon/index.tsx:13
+msgid "Het fonds"
+msgstr "The fund"
+
+#: src/app/scenes/scene-3/index.tsx:114
+msgid "Het internet bestaat uit meer dan 100.000 netwerken die met elkaar communiceren. Om dat makkelijk te maken komen ze op grote knooppunten samen."
+msgstr "The internet consists of more than 100,000 networks that communicate with each other. To make that easier, these networks come together at large exchange points."
+
+#: src/app/scenes/scene-3/index.tsx:57
+msgid "Het internet is ontstaan op universiteiten. Nog steeds wordt er door veel onderzoekers gewerkt aan het verbeteren van het internet."
+msgstr "The internet originated at universities. To this day, many researchers continue to work on improving the internet."
+
+#: src/app/scenes/scene-3/index.tsx:252
+msgid "Het pakketje gaat van hand tot hand om aan te komen bij Zoey. Daar zijn veel verschillende partijen bij betrokken."
+msgstr "The packet passes from hand to hand on its way to Zoey. Many different parties are involved."
+
+#: src/app/scenes/scene-2/index.tsx:58
+msgid "Het pakketje wordt door het postbedrijf verder getransporteerd. Door heldere bewegwijzering weten ze precies hoe het pakketje op de bestemming kan aankomen."
+msgstr "The packet is transported further by the delivery company. Clear signposting tells them exactly how the packet can reach its destination."
+
+#: src/app/scenes/scene-1/index.tsx:107
+msgid "Het systeem dat namen omzet in nummers heet <0>DNS</0>."
+msgstr "The system that translates names into numbers is called <0>DNS</0>."
+
+#: src/app/layout.tsx:25
+msgid "Hoe het Net Werkt"
+msgstr "How the Net Works"
+
+#: src/app/components/Footer/index.tsx:19
+msgid "is een visualisatie van hoe protocollen, organisaties en infrastructuur samenkomen om ons dagelijkse internet mogelijk te maken. Het presenteert de resultaten van de call \"Internet Infrastructuur in Beeld\" van het SIDN Fonds."
+msgstr "is a visualisation of how protocols, organisations and infrastructure come together to make our everyday internet possible. It presents the results of the \"Internet Infrastructuur in Beeld\" call by the SIDN Fonds."
+
+#: src/app/components/Introduction/index.tsx:42
+msgid "Lees het verhaal"
+msgstr "Read the story"
+
+#: src/app/components/Introduction/index.tsx:26
+msgid "Maar hoe werkt het eigenlijk?"
+msgstr "But how does it actually work?"
+
+#: src/app/scenes/scene-2/index.tsx:63
+msgid "Met het <0>BGP</0> protocol communiceren netwerken over hoe ze verbonden zijn met elkaar."
+msgstr "With the <0>BGP</0> protocol, networks communicate about how they are connected to each other."
+
+#: src/app/scenes/scene-2/index.tsx:140
+msgid "Met het pakketje gaat Opa Harry naar het dichtstbijzijnde pakketpunt."
+msgstr "With the packet in hand, Grandpa Harry heads to the nearest drop-off point."
+
+#: src/app/components/Footer/index.tsx:48
+msgid "Met medewerking van"
+msgstr "With the support of"
+
+#: src/app/components/Visualisations/index.tsx:31
+msgid "Mis je een visualisatie?"
+msgstr "Missing a visualisation?"
+
+#: src/app/scenes/scene-3/index.tsx:145
+msgid "Om het internet te verbinden hebben we veel wegen, kabels, servers en datacentra nodig."
+msgstr "To connect the internet, we need many roads, cables, servers and data centres."
+
+#: src/app/scenes/scene-3/index.tsx:191
+msgid "Om sommige protocollen te laten werken hebben we onafhankelijke organisaties nodig."
+msgstr "To make some protocols work, we need independent organisations."
+
+#: src/app/scenes/scene-3/index.tsx:167
+msgid "Om te zorgen dat de pakketjes goed overhandigd kunnen worden, moeten alle partijen dezelfde tijd gebruiken."
+msgstr "To ensure packets can be handed off correctly, all parties need to use the same time."
+
+#: src/app/scenes/scene-2/index.tsx:116
+msgid "Opa brengt het pakketje van zijn eigen netwerk naar zijn eigen internetprovider. Vanaf daar pakt de provider het versturen van het pakketje op."
+msgstr "Grandpa brings the packet from his own network to his internet provider. From there, the provider takes over sending the packet."
+
+#: src/app/scenes/scene-2/index.tsx:91
+msgid "Opa Harry geeft het pakketje af bij het pakketpunt. Daar wordt het pakketje opgeslagen en verder verzonden."
+msgstr "Grandpa Harry drops the packet off at the drop-off point. There, the packet is stored and forwarded."
+
+#: src/app/scenes/scene-1/index.tsx:75
+msgid "Opa Harry maakt een pakketje voor Zoey. Om te zorgen dat het goed aankomt, plakt hij een aantal etiketten op het pakketje."
+msgstr "Grandpa Harry prepares a packet for Zoey. To make sure it arrives safely, he sticks a number of labels on the packet."
+
+#: src/app/scenes/scene-1/index.tsx:102
+msgid "Opa Harry zoekt in het adressenboek Zoey's adres op. Dit IP-adres schrijft hij op de buitenkant van het pakketje."
+msgstr "Grandpa Harry looks up Zoey's address in the address book. He writes this IP address on the outside of the packet."
+
+#: src/app/components/Visualisations/data.tsx:35
+msgid "Packet Panic is een spel over het routeren van internetpakketten."
+msgstr "Packet Panic is a game about routing internet packets."
+
+#: src/app/scenes/scene-3/index.tsx:73
+msgid "Tegenwoordig kunnen we niet zonder internet."
+msgstr "Nowadays, we cannot live without the internet."
+
+#: src/app/components/PreviewBanner/index.tsx:30
+msgid "This is a preview"
+msgstr "This is a preview"
+
+#: src/app/components/Menu/index.tsx:22
+msgid "Verhaal"
+msgstr "Story"
+
+#: src/app/scenes/scene-4/index.tsx:12
+msgid "Via het netwerk van postbedrijven komt het pakketje uiteindelijk bij Zoey aan."
+msgstr "Via the network of delivery companies, the packet eventually arrives at Zoey's."
+
+#: src/app/components/Footer/index.tsx:27
+msgid "Visualisatie door"
+msgstr "Visualisation by"
+
+#: src/app/components/Menu/index.tsx:28
+msgid "Visualisaties"
+msgstr "Visualisations"
+
+#: src/app/components/Visualisations/index.tsx:18
+msgid "Visualisaties van het internet"
+msgstr "Visualisations of the internet"
+
+#: src/app/components/Introduction/index.tsx:17
+msgid "We gebruiken <0>het internet</0> elke dag."
+msgstr "We use <0>the internet</0> every day."
+
+#: src/app/components/Visualisations/index.tsx:33
+msgid "Wil je een visualisatie toevoegen aan deze lijst? We accepteren pull requests! Draag bij aan Hoe het Net Werkt in onze GitHub repository. <0>Stuur een PR!</0>"
+msgstr "Want to add a visualisation to this list? We accept pull requests! Contribute to How the Net Works in our GitHub repository. <0>Send a PR!</0>"
+
+#: src/app/components/Visualisations/data.tsx:66
+msgid "Zijn we al autonoom? brengt in beeld hoe afhankelijk het internet in Nederland is van niet-Europese technologie."
+msgstr "Are we autonomous yet? maps how dependent the internet in the Netherlands is on non-European technology."
+
+#: src/app/scenes/scene-3/index.tsx:196
+msgid "Zo is het <0>SIDN</0> verantwoordelijk voor alle website die eindigen op <1>.nl</1>."
+msgstr "For instance, <0>SIDN</0> is responsible for all websites ending in <1>.nl</1>."
+
+#: src/app/scenes/scene-4/index.tsx:17
+msgid "Zoey is erg blij met het pakketje van Opa Harry. Haar e-mailtje om Opa Kees te bedanken legt dezelfde afstand af in een oogwenk."
+msgstr "Zoey is very happy with the packet from Grandpa Harry. Her email to thank Grandpa Harry covers the same distance in the blink of an eye."
+
+#: src/app/scenes/scene-3/index.tsx:119
+msgid "Zulke knooppunten heten <0>IXP</0>'s. De Amsterdam Internet Exchange is een van de grootste ter wereld."
+msgstr "Such exchange points are called <0>IXP</0>s. The Amsterdam Internet Exchange is one of the largest in the world."

@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { Trans } from '@lingui/react/macro';
 
 const LOCAL_STORAGE_KEY = 'hoe-het-net-werkt-preview-banner-dismissed';
 
@@ -26,7 +27,7 @@ export default function PreviewBanner() {
         <div className="fixed top-0 left-0 right-0 p-4 bg-blue-200/50 z-[100] backdrop-blur-sm">
             <div className="flex items-center justify-between max-w-7xl mx-auto">
                 <p className="m-0 text-sm font-medium">
-                    This is a preview
+                    <Trans>This is a preview</Trans>
                 </p>
                 <button onClick={() => setIsDismissed(true)}>
                     ⨉

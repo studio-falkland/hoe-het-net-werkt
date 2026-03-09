@@ -2,6 +2,7 @@ import type { Visualisation as VisualisationType } from './data';
 import cn from '@/lib/cn';
 import styles from './index.module.css';
 import ExportedImage from 'next-image-export-optimizer';
+import { Trans } from '@lingui/react/macro';
 
 export interface VisualisationProps {
     visualisation: VisualisationType;
@@ -35,7 +36,7 @@ export default function Visualisation({ visualisation }: VisualisationProps) {
                 )}
             </div>
             <p>{visualisation.description}</p>
-            <p className="text-sm text-gray-500 font-serif italic">Gemaakt door</p>
+            <p className="text-sm text-gray-500 font-serif italic"><Trans>Gemaakt door</Trans></p>
             <div className="flex gap-2 mb-4">
                 {visualisation.createdBy?.map((c, i) => (
                     <a key={i} target="_blank">
@@ -56,9 +57,11 @@ export default function Visualisation({ visualisation }: VisualisationProps) {
                 className="bg-gray-100 border-gray-200 border text-center text-sm rounded p-2 mt-auto"
                 target="_blank"
             >
-                Bezoek
-                {' '}
-                <span className="font-bold">{visualisation.title}</span>
+                <Trans>
+                    Bezoek
+                    {' '}
+                    <span className="font-bold">{visualisation.title}</span>
+                </Trans>
             </a>
         </div>
     );

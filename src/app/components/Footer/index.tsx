@@ -1,3 +1,5 @@
+import { Trans } from '@lingui/react/macro';
+
 export default function Footer() {
     return (
         <div className="bg-[#f6f6f6]">
@@ -14,13 +16,15 @@ export default function Footer() {
                 <p className="font-normal">
                     <span className="font-bold">Hoe het Net Werkt</span>
                     {' '}
-                    is een visualisatie van hoe protocollen, organisaties en infrastructuur samenkomen om ons dagelijkse internet mogelijk te maken.
-                    Het presenteert de resultaten van de call &quot;Internet Infrastructuur in Beeld&quot; van het SIDN Fonds.
+                    <Trans>
+                        is een visualisatie van hoe protocollen, organisaties en infrastructuur samenkomen om ons dagelijkse internet mogelijk te maken.
+                        Het presenteert de resultaten van de call &quot;Internet Infrastructuur in Beeld&quot; van het SIDN Fonds.
+                    </Trans>
                 </p>
                 <div className="flex gap-16 mt-12 lg:flex-row flex-col">
                     <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
-                            Visualisatie door
+                            <Trans>Visualisatie door</Trans>
                         </span>
                         <div className="flex gap-6 items-center h-16">
                             <a href="https://falkland.studio" target="_blank" className="hover:opacity-80 transition-opacity">
@@ -31,7 +35,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
-                            Gefinancierd door
+                            <Trans>Gefinancierd door</Trans>
                         </span>
                         <div className="flex gap-6 items-center h-16">
                             <a href="https://sidnfonds.nl" target="_blank" className="hover:opacity-80 transition-opacity">
@@ -41,7 +45,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
-                            Met medewerking van
+                            <Trans>Met medewerking van</Trans>
                         </span>
                         <div className="flex gap-6 items-center h-16">
                             <a href="https://sidnlabs.nl" target="_blank" className="hover:opacity-80 transition-opacity">
@@ -51,7 +55,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2 flex-wrap">
                         <span className="text-sm text-gray-500 font-serif italic">
-                            Deelnemers Internet Infrastructuur in Beeld
+                            <Trans>Deelnemers Internet Infrastructuur in Beeld</Trans>
                         </span>
                         <div className="flex gap-6 items-center h-16">
                             <a href="https://studio-tast.nl" target="_blank" className="hover:opacity-80 transition-opacity">

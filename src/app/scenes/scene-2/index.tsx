@@ -4,6 +4,7 @@ import cn from '@/lib/cn';
 import { Layer } from '@/lib/layer';
 import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 import TextBox from '../../components/TextBox';
+import { Trans } from '@lingui/react/macro';
 
 import styles from './index.module.css';
 
@@ -53,18 +54,26 @@ const LAYERS: Layer<Scene2Layer>[] = [
         points: '1258,1672 1260,1505 1207,1507 1193,1450 1265,1435 1263,1368 1182,1343 1188,1275 1262,1293 1267,1263 1290,1263 1290,1297 1363,1327 1380,1365 1353,1395 1293,1378 1288,1437 1383,1430 1422,1455 1392,1495 1292,1503 1285,1675',
         tooltip: (
             <>
-                <p className="mb-3">Het pakketje wordt door het postbedrijf verder getransporteerd. Door heldere bewegwijzering weten ze precies hoe het pakketje op de bestemming kan aankomen.</p>
                 <p className="mb-3">
-                    Met het
-                    {' '}
-                    <b>BGP</b>
-                    {' '}
-                    protocol communiceren netwerken over hoe ze verbonden zijn met elkaar.
+                    <Trans>
+                        Het pakketje wordt door het postbedrijf verder getransporteerd. Door heldere bewegwijzering weten ze precies hoe het pakketje op de bestemming kan aankomen.
+                    </Trans>
+                </p>
+                <p className="mb-3">
+                    <Trans>
+                        Met het
+                        {' '}
+                        <b>BGP</b>
+                        {' '}
+                        protocol communiceren netwerken over hoe ze verbonden zijn met elkaar.
+                    </Trans>
                 </p>
                 <p>
-                    <b>Packet Panic</b>
-                    {' '}
-                    laat zien hoe BGP werkt en wat daarbij fout kan gaan.
+                    <Trans>
+                        <b>Packet Panic</b>
+                        {' '}
+                        laat zien hoe BGP werkt en wat daarbij fout kan gaan.
+                    </Trans>
                 </p>
             </>
         ),
@@ -79,14 +88,18 @@ const LAYERS: Layer<Scene2Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Opa Harry geeft het pakketje af bij het pakketpunt. Daar wordt het pakketje opgeslagen en verder verzonden.
+                    <Trans>
+                        Opa Harry geeft het pakketje af bij het pakketpunt. Daar wordt het pakketje opgeslagen en verder verzonden.
+                    </Trans>
                 </p>
                 <p>
-                    Het
-                    {' '}
-                    <b>SMTP</b>
-                    {' '}
-                    protocol is ervoor gemaakt om e-mails te verzenden.
+                    <Trans>
+                        Het
+                        {' '}
+                        <b>SMTP</b>
+                        {' '}
+                        protocol is ervoor gemaakt om e-mails te verzenden.
+                    </Trans>
                 </p>
             </>
         ),
@@ -100,7 +113,9 @@ const LAYERS: Layer<Scene2Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Opa brengt het pakketje van zijn eigen netwerk naar zijn eigen internetprovider. Vanaf daar pakt de provider het versturen van het pakketje op.
+                    <Trans>
+                        Opa brengt het pakketje van zijn eigen netwerk naar zijn eigen internetprovider. Vanaf daar pakt de provider het versturen van het pakketje op.
+                    </Trans>
                 </p>
             </>
         ),
@@ -122,7 +137,7 @@ export default function Scene2() {
     return (
         <>
             <TextBox className="mt-60 mb-40" image={packetPointProfile} imagePosition="right">
-                <p>Met het pakketje gaat Opa Harry naar het dichtstbijzijnde pakketpunt.</p>
+                <p><Trans>Met het pakketje gaat Opa Harry naar het dichtstbijzijnde pakketpunt.</Trans></p>
             </TextBox>
             <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
                 <div className="aspect-[3/2] w-auto h-[600px] sm:h-[740px] md:h-[1000px] lg:h-[1200px] mx-auto relative">

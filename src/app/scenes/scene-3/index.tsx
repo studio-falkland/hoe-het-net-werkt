@@ -4,6 +4,7 @@ import cn from '@/lib/cn';
 import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
 import { Layer } from '@/lib/layer';
 import TextBox from '../../components/TextBox';
+import { Trans } from '@lingui/react/macro';
 
 import styles from './index.module.css';
 
@@ -53,7 +54,9 @@ const LAYERS: Layer<Scene3Layer>[] = [
         tooltip: (
             <>
                 <p>
-                    Het internet is ontstaan op universiteiten. Nog steeds wordt er door veel onderzoekers gewerkt aan het verbeteren van het internet.
+                    <Trans>
+                        Het internet is ontstaan op universiteiten. Nog steeds wordt er door veel onderzoekers gewerkt aan het verbeteren van het internet.
+                    </Trans>
                 </p>
             </>
         ),
@@ -67,12 +70,14 @@ const LAYERS: Layer<Scene3Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Tegenwoordig kunnen we niet zonder internet.
+                    <Trans>Tegenwoordig kunnen we niet zonder internet.</Trans>
                 </p>
                 <p>
-                    <b>Zijn we al autonoom?</b>
-                    {' '}
-                    meet of er bepaalde partijen zijn waar we misschien te afhankelijk van zijn.
+                    <Trans>
+                        <b>Zijn we al autonoom?</b>
+                        {' '}
+                        meet of er bepaalde partijen zijn waar we misschien te afhankelijk van zijn.
+                    </Trans>
                 </p>
             </>
         ),
@@ -106,13 +111,17 @@ const LAYERS: Layer<Scene3Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Het internet bestaat uit meer dan 100.000 netwerken die met elkaar communiceren. Om dat makkelijk te maken komen ze op grote knooppunten samen.
+                    <Trans>
+                        Het internet bestaat uit meer dan 100.000 netwerken die met elkaar communiceren. Om dat makkelijk te maken komen ze op grote knooppunten samen.
+                    </Trans>
                 </p>
                 <p>
-                    Zulke knooppunten heten
-                    {' '}
-                    <b>IXP</b>
-                    &apos;s. De Amsterdam Internet Exchange is een van de grootste ter wereld.
+                    <Trans>
+                        Zulke knooppunten heten
+                        {' '}
+                        <b>IXP</b>
+                        &apos;s. De Amsterdam Internet Exchange is een van de grootste ter wereld.
+                    </Trans>
                 </p>
             </>
         ),
@@ -133,12 +142,16 @@ const LAYERS: Layer<Scene3Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Om het internet te verbinden hebben we veel wegen, kabels, servers en datacentra nodig.
+                    <Trans>
+                        Om het internet te verbinden hebben we veel wegen, kabels, servers en datacentra nodig.
+                    </Trans>
                 </p>
                 <p>
-                    <b>Digitale Kathedralen</b>
-                    {' '}
-                    laat zien hoe al die digitale infrastructuur sporen in ons landschap achterlaat.
+                    <Trans>
+                        <b>Digitale Kathedralen</b>
+                        {' '}
+                        laat zien hoe al die digitale infrastructuur sporen in ons landschap achterlaat.
+                    </Trans>
                 </p>
             </>
         ),
@@ -151,14 +164,18 @@ const LAYERS: Layer<Scene3Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Om te zorgen dat de pakketjes goed overhandigd kunnen worden, moeten alle partijen dezelfde tijd gebruiken.
+                    <Trans>
+                        Om te zorgen dat de pakketjes goed overhandigd kunnen worden, moeten alle partijen dezelfde tijd gebruiken.
+                    </Trans>
                 </p>
                 <p>
-                    Het
-                    {' '}
-                    <b>NTP</b>
-                    {' '}
-                    protocol is ervoor gemaakt om de tijd op alle apparaten gelijk te houden.
+                    <Trans>
+                        Het
+                        {' '}
+                        <b>NTP</b>
+                        {' '}
+                        protocol is ervoor gemaakt om de tijd op alle apparaten gelijk te houden.
+                    </Trans>
                 </p>
             </>
         ),
@@ -171,17 +188,21 @@ const LAYERS: Layer<Scene3Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Om sommige protocollen te laten werken hebben we onafhankelijke organisaties nodig.
+                    <Trans>
+                        Om sommige protocollen te laten werken hebben we onafhankelijke organisaties nodig.
+                    </Trans>
                 </p>
                 <p>
-                    Zo is het
-                    {' '}
-                    <b>SIDN</b>
-                    {' '}
-                    verantwoordelijk voor alle website die eindigen op
-                    {' '}
-                    <b>.nl</b>
-                    .
+                    <Trans>
+                        Zo is het
+                        {' '}
+                        <b>SIDN</b>
+                        {' '}
+                        verantwoordelijk voor alle website die eindigen op
+                        {' '}
+                        <b>.nl</b>
+                        .
+                    </Trans>
                 </p>
             </>
         ),
@@ -228,7 +249,7 @@ export default function Scene3() {
     return (
         <>
             <TextBox className="mt-60 mb-40" image={ixpProfile}>
-                <p>Het pakketje gaat van hand tot hand om aan te komen bij Zoey. Daar zijn veel verschillende partijen bij betrokken.</p>
+                <p><Trans>Het pakketje gaat van hand tot hand om aan te komen bij Zoey. Daar zijn veel verschillende partijen bij betrokken.</Trans></p>
             </TextBox>
             <div className={cn('w-screen mt-60 overflow-hidden flex justify-center', styles.root)}>
                 <div className="aspect-[6/5] w-auto h-[560px] sm:h-[900px] md:h-[1300px] lg:h-[1400px] mx-auto relative">

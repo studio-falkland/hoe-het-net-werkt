@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     },
     transpilePackages: ['next-image-export-optimizer', 'scroll-timeline-polyfill'],
+    experimental: {
+        swcPlugins: [
+            ['@lingui/swc-plugin', {}],
+        ],
+    },
 };
 
 export default nextConfig;

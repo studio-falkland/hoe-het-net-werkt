@@ -6,6 +6,7 @@ import lighthouse from '@/assets/profiles/lighthouse.png';
 import tours from '@/assets/profiles/tours.png';
 import trainstation from '@/assets/profiles/trainstation.png';
 import TextBox from '@/app/components/TextBox';
+import { Trans } from '@lingui/react/macro';
 
 export default function Introduction() {
     return (
@@ -13,14 +14,16 @@ export default function Introduction() {
             <TextBox>
                 <div className="font-medium text-xl text-center">
                     <h1>
-                        We gebruiken
-                        {' '}
-                        <span className="font-bold">het internet</span>
-                        {' '}
-                        elke dag.
+                        <Trans>
+                            We gebruiken
+                            {' '}
+                            <span className="font-bold">het internet</span>
+                            {' '}
+                            elke dag.
+                        </Trans>
                     </h1>
                     <h1>
-                        Maar hoe werkt het eigenlijk?
+                        <Trans>Maar hoe werkt het eigenlijk?</Trans>
                     </h1>
                 </div>
             </TextBox>
@@ -36,8 +39,8 @@ export default function Introduction() {
                     />
                     <div className="absolute inset-0 bg-linear-to-b from-transparent to-white rounded-lg" />
                     <div className="absolute bottom-0 left-0 right-0 text-center p-4">
-                        <p className="font-semibold">Lees het verhaal</p>
-                        <p className="text-xs text-gray-500">&hellip; en leer over de protocollen, organisaties en infrastructuur die het internet mogelijk maken.</p>
+                        <p className="font-semibold"><Trans>Lees het verhaal</Trans></p>
+                        <p className="text-xs text-gray-500"><Trans>&hellip; en leer over de protocollen, organisaties en infrastructuur die het internet mogelijk maken.</Trans></p>
                     </div>
                 </a>
                 <a
@@ -76,8 +79,8 @@ export default function Introduction() {
                     </div>
                     <div className="absolute inset-0 bg-linear-to-b from-transparent to-white rounded-lg" />
                     <div className="absolute bottom-0 left-0 right-0 text-center p-4">
-                        <p className="font-semibold">Bekijk de visualisaties</p>
-                        <p className="text-xs tracking-wide text-gray-500">Een database met rijke visualisaties van en over het internet.</p>
+                        <p className="font-semibold"><Trans>Bekijk de visualisaties</Trans></p>
+                        <p className="text-xs tracking-wide text-gray-500"><Trans>Een database met rijke visualisaties van en over het internet.</Trans></p>
                     </div>
                 </a>
             </div>

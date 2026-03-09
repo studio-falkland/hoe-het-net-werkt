@@ -3,6 +3,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import cn from '@/lib/cn';
 import { Layer } from '@/lib/layer';
 import useTouchAreas, { activeStyle, hoveredStyle, touchAreaStyle } from '@/lib/useTouchAreas';
+import { Trans } from '@lingui/react/macro';
 
 import styles from './index.module.css';
 
@@ -71,13 +72,17 @@ const LAYERS: Layer<Scene1Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Opa Harry maakt een pakketje voor Zoey. Om te zorgen dat het goed aankomt, plakt hij een aantal etiketten op het pakketje.
+                    <Trans>
+                        Opa Harry maakt een pakketje voor Zoey. Om te zorgen dat het goed aankomt, plakt hij een aantal etiketten op het pakketje.
+                    </Trans>
                 </p>
                 <p>
-                    Het
-                    {' '}
-                    <b>TCP</b>
-                    -protocol is ervoor gemaakt om te zorgen dat het pakketje goed aankomt.
+                    <Trans>
+                        Het
+                        {' '}
+                        <b>TCP</b>
+                        -protocol is ervoor gemaakt om te zorgen dat het pakketje goed aankomt.
+                    </Trans>
                 </p>
             </>
         ),
@@ -94,13 +99,17 @@ const LAYERS: Layer<Scene1Layer>[] = [
         tooltip: (
             <>
                 <p className="mb-3">
-                    Opa Harry zoekt in het adressenboek Zoey&apos;s adres op. Dit IP-adres schrijft hij op de buitenkant van het pakketje.
+                    <Trans>
+                        Opa Harry zoekt in het adressenboek Zoey&apos;s adres op. Dit IP-adres schrijft hij op de buitenkant van het pakketje.
+                    </Trans>
                 </p>
                 <p>
-                    Het systeem dat namen omzet in nummers heet
-                    {' '}
-                    <b>DNS</b>
-                    .
+                    <Trans>
+                        Het systeem dat namen omzet in nummers heet
+                        {' '}
+                        <b>DNS</b>
+                        .
+                    </Trans>
                 </p>
             </>
         ),
@@ -124,9 +133,11 @@ export default function Scene1() {
         <>
             <TextBox className="mt-40" image={grandpaProfile}>
                 <p>
-                    <b>Opa Harry</b>
-                    {' '}
-                    leest in de krant over het favoriete team van zijn kleindochter Zoey. Hij wil haar daar graag over vertellen en vragen hoe het met haar gaat.
+                    <Trans>
+                        <b>Opa Harry</b>
+                        {' '}
+                        leest in de krant over het favoriete team van zijn kleindochter Zoey. Hij wil haar daar graag over vertellen en vragen hoe het met haar gaat.
+                    </Trans>
                 </p>
             </TextBox>
             <div className={cn('w-screen pt-[200px] overflow-hidden flex justify-center', styles.root)}>

@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import { Trans } from '@lingui/react/macro';
 
 import packetPanic from './images/packet-panic.png';
 import bgpTravelGuide from './images/bgp-travel-guide.webp';
@@ -31,7 +32,7 @@ export interface Visualisation {
 export const visualisations: Visualisation[] = [
     {
         title: 'Packet Panic',
-        description: 'Packet Panic is een spel over het routeren van internetpakketten.',
+        description: <Trans>Packet Panic is een spel over het routeren van internetpakketten.</Trans>,
         image: packetPanic,
         url: 'https://packet-panic.nl',
         internetInfrastructuurInBeeld: true,
@@ -46,7 +47,7 @@ export const visualisations: Visualisation[] = [
     },
     {
         title: 'Digitale Kathedralen',
-        description: 'Digitale Kathedralen is een reisgids voor alle lokaties waar BGP routing plaatsvindt.',
+        description: <Trans>Digitale Kathedralen is een reisgids voor alle lokaties waar BGP routing plaatsvindt.</Trans>,
         image: bgpTravelGuide,
         url: '#',
         internetInfrastructuurInBeeld: true,
@@ -62,7 +63,7 @@ export const visualisations: Visualisation[] = [
     },
     {
         title: 'Zijn we al autonoom?',
-        description: 'Zijn we al autonoom? brengt in beeld hoe afhankelijk het internet in Nederland is van niet-Europese technologie.',
+        description: <Trans>Zijn we al autonoom? brengt in beeld hoe afhankelijk het internet in Nederland is van niet-Europese technologie.</Trans>,
         image: zijnWeAlAutonoom,
         url: 'https://zijnwealautonoom.nl',
         internetInfrastructuurInBeeld: true,
@@ -76,7 +77,7 @@ export const visualisations: Visualisation[] = [
     },
     {
         title: '.nl Stats',
-        description: '.nl Stats verzamelt statistieken over het .nl domein.',
+        description: <Trans>.nl Stats verzamelt statistieken over het .nl domein.</Trans>,
         image: nlStats,
         url: 'https://stats.sidnlabs.nl/nl/',
         tags: ['dns'],
