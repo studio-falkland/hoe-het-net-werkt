@@ -28,6 +28,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Cache optimized images
+        uses: actions/cache@v4
+        with:
+          path: public/nextImageExportOptimizer
+          key: ${{ runner.os }}-next-image-export-optimizer-${{ hashFiles('public/images/**') }}
+          restore-keys: |
+            ${{ runner.os }}-next-image-export-optimizer-
+
       - name: Lint
         if: matrix.locale == 'nl'
         run: npm run lint
